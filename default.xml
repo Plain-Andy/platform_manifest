@@ -124,7 +124,7 @@
   <project path="external/bzip2" name="android_platform_external_bzip2" remote="ill" revision="illusion-4.4" />
   <project path="external/ceres-solver" name="android_platform_external_ceres-solver" remote="ill" revision="illusion-4.4" />
   <project path="external/checkpolicy" name="android_platform_external_checkpolicy" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium" name="android_platform_external_chromium" remote="ill"  />
+  <project path="external/chromium" name="android_platform_external_chromium" remote="ill" revision="illusion-4.4" />
   <project path="external/chromium-libpac" name="android_platform_external_chromium-libpac" remote="ill" revision="illusion-4.4" />
   <project path="external/chromium-trace" name="android_platform_external_chromium-trace" remote="ill" revision="illusion-4.4" />
   <project path="external/chromium_org" name="android_platform_external_chromium_org" remote="ill" revision="illusion-4.4" />
