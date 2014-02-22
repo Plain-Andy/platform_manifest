@@ -467,7 +467,7 @@
   <project path="prebuilts/ndk" name="android_platform_prebuilts_ndk" groups="pdk" />
   <project path="prebuilts/python/darwin-x86/2.7.5" name="android_platform_prebuilts_python_darwin-x86_2.7.5" groups="darwin" remote="ill" revision="illusion-4.4" />
   <project path="prebuilts/python/linux-x86/2.7.5" name="android_platform_prebuilts_python_linux-x86_2.7.5" groups="linux" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/qemu-kernel" name="android_platform_prebuilts_qemu-kernel" groups="pdk"  remote="ill"  />
+  <project path="prebuilts/qemu-kernel" name="android_platform_prebuilts_qemu-kernel" groups="pdk"  remote="ill" revision="illusion-4.4"  />
   <project path="prebuilts/runtime" name="android_platform_prebuilts_runtime" />
   <project path="prebuilts/sdk" name="android_platform_prebuilts_sdk" groups="pdk" />
   <project path="prebuilts/tools" name="android_platform_prebuilts_tools" />
@@ -478,14 +478,14 @@
   <project path="system/security" name="android_platform_system_security" groups="pdk" />
   <project path="tools/adt/eclipse" name="IllusionRom/android_platform_tools_adt_eclipse" groups="notdefault,tools" remote="ill" revision="illusion-4.4" />
   <project path="tools/adt/idea" name="IllusionRom/android_platform_tools_adt_idea" groups="notdefault,tools" remote="ill" revision="illusion-4.4" />
-  <project path="tools/base" name="IllusionRom/android_platform_tools_base" groups="notdefault,tools" remote="ill"  />
-  <project path="tools/build" name="IllusionRom/android_platform_tools_build" groups="notdefault,tools" remote="ill"  />
-  <project path="tools/emulator" name="IllusionRom/android_platform_tools_emulator" groups="notdefault,tools" remote="ill"  />
+  <project path="tools/base" name="IllusionRom/android_platform_tools_base" groups="notdefault,tools" remote="ill"  revision="illusion-4.4"  />
+  <project path="tools/build" name="IllusionRom/android_platform_tools_build" groups="notdefault,tools" remote="ill"  revision="illusion-4.4"  />
+  <project path="tools/emulator" name="IllusionRom/android_platform_tools_emulator" groups="notdefault,tools" remote="ill"  revision="illusion-4.4"  />
   <project path="tools/external/fat32lib" name="android_platform_tools_external_fat32lib" groups="tools" />
   <project path="tools/external/gradle" name="android_platform_tools_external_gradle" groups="tools" />
-  <project path="tools/idea" name="IllusionRom/android_platform_tools_idea" groups="notdefault,tools" remote="ill"  />
-  <project path="tools/motodev" name="IllusionRom/android_platform_tools_motodev" groups="notdefault,motodev" remote="ill"  />
-  <project path="tools/studio/cloud" name="IllusionRom/android_platform_tools_studio_cloud" groups="notdefault,tools" remote="ill"  />
-  <project path="tools/swt" name="IllusionRom/android_platform_tools_swt" groups="notdefault,tools" remote="ill"  />
+  <project path="tools/idea" name="IllusionRom/android_platform_tools_idea" groups="notdefault,tools" remote="ill"  revision="illusion-4.4"  />
+  <project path="tools/motodev" name="IllusionRom/android_platform_tools_motodev" groups="notdefault,motodev" remote="ill"  revision="illusion-4.4"  />
+  <project path="tools/studio/cloud" name="IllusionRom/android_platform_tools_studio_cloud" groups="notdefault,tools" remote="ill"  revision="illusion-4.4"  />
+  <project path="tools/swt" name="IllusionRom/android_platform_tools_swt" groups="notdefault,tools" remote="ill"  revision="illusion-4.4"  />
 
 </manifest>
