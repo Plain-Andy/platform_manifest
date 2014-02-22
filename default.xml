@@ -23,6 +23,7 @@
 	   revision="kk" />
 
   <default remote="plain"
+           revision="kk"
            sync-j="4" />
 
   <!-- Manifest -->
