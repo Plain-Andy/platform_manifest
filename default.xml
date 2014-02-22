@@ -109,7 +109,7 @@
   <project path="external/android-clat" name="android_platform_external_android-clat" remote="ill" revision="illusion-4.4" />
   <project path="external/android-mock" name="android_platform_external_android-mock" remote="ill" revision="illusion-4.4" />
   <project path="external/ant-glob" name="android_platform_external_ant-glob" remote="ill" revision="illusion-4.4" />
-  <project path="external/antlr" name="android_platform_external_antlr" />
+  <project path="external/antlr" name="android_platform_external_antlr" remote="ill" revision="illusion-4.4" />
   <project path="external/apache-harmony" name="android_platform_external_apache-harmony" remote="ill" revision="illusion-4.4" />
   <project path="external/apache-http" name="android_platform_external_apache-http" remote="ill" revision="illusion-4.4" />
   <project path="external/apache-qp" name="android_platform_external_apache-qp" remote="ill" revision="illusion-4.4" />
