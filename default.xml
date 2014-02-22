@@ -475,7 +475,7 @@
   <project path="system/core" name="android_platform_system_core" groups="pdk" />
   <project path="system/media" name="android_platform_system_media" groups="pdk" />
   <project path="system/netd" name="android_platform_system_netd" groups="pdk" />
-  <project path="system/security" name="IllusionRom/android_platform_system_security" groups="pdk" />
+  <project path="system/security" name="android_platform_system_security" groups="pdk" />
   <project path="tools/adt/eclipse" name="IllusionRom/android_platform_tools_adt_eclipse" groups="notdefault,tools" remote="ill" />
   <project path="tools/adt/idea" name="IllusionRom/android_platform_tools_adt_idea" groups="notdefault,tools" remote="ill" />
   <project path="tools/base" name="IllusionRom/android_platform_tools_base" groups="notdefault,tools" remote="ill"  />
