@@ -34,9 +34,14 @@
   <project path="vendor/lge" name="android_platform_vendor_lge" />
   <project path="vendor/broadcom" name="android_platform_vendor_broadcom" />
   <project path="vendor/qcom" name="android_platform_vendor_qcom" />
-  <project path="vendor/asus" name="android_platform_vendor_asus" />
   <project path="vendor/samsung" name="TheMuppets/proprietary_vendor_samsung" remote="gh" revision="cm-11.0" />
+  <project path="vendor/asus" name="TheMuppets/proprietary_vendor_asus" remote="gh" revision="cm-11.0" />
   <project path="vendor/htc" name="android_platform_vendor_htc"/>
+  <project path="vendor/elan" name="TheMuppets/proprietary_vendor_elan" remote="gh" revision="cm-11.0" />
+  <project path="vendor/invensense" name="TheMuppets/proprietary_vendor_invensense" remote="gh" revision="cm-11.0" />
+  <project path="vendor/nvidia" name="TheMuppets/proprietary_vendor_nvidia" remote="gh" revision="cm-11.0" />
+  <project path="vendor/nxp" name="TheMuppets/proprietary_vendor_nxp" remote="gh" revision="cm-11.0" />
+  <project path="vendor/widevine" name="TheMuppets/proprietary_vendor_widevine" remote="gh" revision="cm-11.0" />
 
   <!-- Illusion Additions -->
   <project path="packages/apps/Torch" name="android_platform_packages_apps_Torch" remote="ill" revision="illusion-4.4" />
@@ -56,7 +61,7 @@
   
   <!-- Custom Kernels -->
   <project path="kernel/htc/vigor" name="vigor_aosp_kernel" />
-  <project name="android_kernel_samsung_d2" path="kernel/samsung/d2" remote="apex" revision="cm-11.0" />
+  <project path="kernel/samsung/d2" name="android_kernel_samsung_d2" remote="apex" revision="cm-11.0" />
   <project path="kernel/asus/grouper" name="android_kernel_asus_grouper" remote="plain" revision="cm-11.0" />
 
   <!-- Superuser -->
