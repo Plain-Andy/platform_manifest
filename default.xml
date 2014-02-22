@@ -209,7 +209,7 @@
   <project path="external/liblzf" name="android_platform_external_liblzf" remote="ill" revision="illusion-4.4" />
   <project path="external/libmtp" name="android_platform_external_libmtp" remote="ill" revision="illusion-4.4" />
   <project path="external/libnfc-nci" name="android_platform_external_libnfc-nci" remote="ill" revision="illusion-4.4" />
-  <project path="external/libnfc-nxp" name="android_platform_external_libnfc-nxp" groups="pdk" />
+  <project path="external/libnfc-nxp" name="android_platform_external_libnfc-nxp" remote="ill" revision="illusion-4.4" />
   <project path="external/libnl-headers" name="android_platform_external_libnl-headers" remote="ill" revision="illusion-4.4" />
   <project path="external/libogg" name="android_platform_external_libogg" remote="ill" revision="illusion-4.4" />
   <project path="external/libpcap" name="android_platform_external_libpcap" remote="ill" revision="illusion-4.4" />
