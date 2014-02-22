@@ -57,7 +57,7 @@
   <!-- Custom Kernels -->
   <project path="kernel/htc/vigor" name="vigor_aosp_kernel" />
   <project name="android_kernel_samsung_d2" path="kernel/samsung/d2" remote="apex" revision="carbon_kk" />
-  <project path="device/asus/grouper" name="android_device_asus_grouper" remote="plain" revision="cm-11.0" />
+  <project path="kernel/asus/grouper" name="android_kernel_asus_grouper" remote="plain" revision="cm-11.0" />
 
   <!-- Superuser -->
   <project path="external/koush/Superuser" name="android_platform_external_koush_superuser" remote="ill" />
