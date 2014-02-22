@@ -51,11 +51,12 @@
   <project name="android_device_samsung_d2-common" path="device/samsung/d2-common" remote="apex" revision="carbon_kk" />
 
   <!--Nexus Devices -->
-  <project path="device/asus/grouper" name="android_device_asus_grouper" remote="ill" />
+  <project path="device/asus/grouper" name="android_device_asus_grouper" />
   
   <!-- Custom Kernels -->
   <project path="kernel/htc/vigor" name="vigor_aosp_kernel" />
   <project name="android_kernel_samsung_d2" path="kernel/samsung/d2" remote="apex" revision="carbon_kk" />
+  <project path="device/asus/grouper" name="android_device_asus_grouper" remote="plain" revision="cm-11.0" />
 
   <!-- Superuser -->
   <project path="external/koush/Superuser" name="android_platform_external_koush_superuser" remote="ill" />
