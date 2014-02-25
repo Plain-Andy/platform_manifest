@@ -61,7 +61,7 @@
   
   <!-- Custom Kernels -->
   <project path="kernel/htc/vigor" name="vigor_aosp_kernel" />
-  <project path="kernel/samsung/d2" name="android_kernel_samsung_d2" remote="apex" revision="cm-11.0" />
+  <project path="kernel/samsung/d2" name="android_kernel_samsung_d2" />
   <project path="kernel/asus/grouper" name="android_kernel_asus_grouper" />
 
   <!-- Superuser -->
@@ -73,6 +73,9 @@
   <project path="hardware/ril" name="CyanogenMod/android_hardware_ril" remote="gh" revision="cm-11.0" />
   <project path="system/extras" name="CyanogenMod/android_system_extras" remote="gh" revision="cm-11.0" />
   <project path="system/vold" name="CyanogenMod/android_system_vold" remote="gh" revision="cm-11.0" />
+  <project path="vendor/tmobile/apps/ThemeChooser" name="CyanogenMod/themes-platform-vendor-tmobile-apps-ThemeChooser" />
+  <project path="vendor/tmobile/libs/com.tmobile.themes" name="CyanogenMod/android_vendor_tmobile_libs_com.tmobile.themes" />
+  <project path="vendor/tmobile/providers/ThemeManager" name="CyanogenMod/android_vendor_tmobile_providers_ThemeManager" />
 
   <!-- Caf -->
   <project path="hardware/qcom/audio-caf" name="android_platform_hardware_qcom_audio-caf" />
@@ -133,7 +136,7 @@
   <project path="external/chromium" name="android_platform_external_chromium" remote="ill" revision="illusion-4.4" />
   <project path="external/chromium-libpac" name="android_platform_external_chromium-libpac" remote="ill" revision="illusion-4.4" />
   <project path="external/chromium-trace" name="android_platform_external_chromium-trace" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org" name="android_platform_external_chromium_org" remote="ill" revision="illusion-4.4" />
+  <project path="external/chromium_org" name="android_platform_external_chromium_org" />
   <project path="external/chromium_org/sdch/open-vcdiff" name="android_platform_external_chromium_org_sdch_open-vcdiff" remote="ill" revision="illusion-4.4" />
   <project path="external/chromium_org/testing/gtest" name="android_platform_external_chromium_org_testing_gtest" remote="ill" revision="illusion-4.4" />
   <project path="external/chromium_org/third_party/WebKit" name="android_platform_external_chromium_org_third_party_WebKit" remote="ill" revision="illusion-4.4" />
@@ -305,7 +308,7 @@
   <project path="external/yaffs2" name="android_platform_external_yaffs2" groups="pdk" remote="ill" revision="illusion-4.4" />
   <project path="external/zlib" name="android_platform_external_zlib" groups="pdk" remote="ill" revision="illusion-4.4" />
   <project path="external/zxing" name="android_platform_external_zxing" remote="ill" revision="illusion-4.4" />
-  <project path="frameworks/av" name="android_platform_frameworks_av" groups="pdk" remote="ill" revision="illusion-4.4" />
+  <project path="frameworks/av" name="android_platform_frameworks_av" />
   <project path="frameworks/base" name="android_platform_frameworks_base" />
   <project path="frameworks/compile/libbcc" name="android_platform_frameworks_compile_libbcc" />
   <project path="frameworks/compile/mclinker" name="android_platform_frameworks_compile_mclinker" />
