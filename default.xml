@@ -58,11 +58,14 @@
 
   <!--Nexus Devices -->
   <project path="device/asus/grouper" name="android_device_asus_grouper" />
+  <project name="android_device_samsung_toro" path="device/samsung/toro" />
+  <project name="android_device_samsung_tuna" path="device/samsung/tuna" />
   
   <!-- Custom Kernels -->
   <project path="kernel/htc/vigor" name="vigor_aosp_kernel" />
   <project path="kernel/samsung/d2" name="android_kernel_samsung_d2" />
   <project path="kernel/asus/grouper" name="android_kernel_asus_grouper" />
+  <project path="kernel/samsung/tuna" name="CyanogenMod/android_kernel_samsung_tuna" remote="gh" revision="cm-11.0" />
 
   <!-- Superuser -->
   <project path="external/koush/Superuser" name="android_platform_external_koush_superuser" remote="ill" revision="illusion-4.4" />
@@ -275,7 +278,7 @@
   <project path="external/robolectric" name="android_platform_external_robolectric" remote="ill" revision="illusion-4.4" />
   <project path="external/safe-iop" name="android_platform_external_safe-iop" groups="pdk" remote="ill" revision="illusion-4.4" />
   <project path="external/scrypt" name="android_platform_external_scrypt" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/sepolicy" name="android_platform_external_sepolicy" groups="pdk" remote="ill" revision="illusion-4.4" />
+  <project path="external/sepolicy" name="android_platform_external_sepolicy" />
   <project path="external/sfntly" name="android_platform_external_sfntly" remote="ill" revision="illusion-4.4" />
   <project path="external/sil-fonts" name="android_platform_external_sil-fonts" remote="ill" revision="illusion-4.4" />
   <project path="external/skia" name="android_platform_external_skia" remote="ill" revision="illusion-4.4" />
