@@ -47,26 +47,7 @@
   <project path="packages/apps/Torch" name="android_platform_packages_apps_Torch" remote="ill" revision="illusion-4.4" />
   <project path="packages/apps/PerformanceControl" name="android_platform_packages_apps_PerformanceControl" remote="ill" revision="illusion-4.4" />
   <project path="prebuilts/gcc/linux-x86/arm/custom-4.7" name="android_platform_prebuilts_gcc_linux-x86_arm_boosted-arm-eabi-4.7" remote="ill" revision="illusion-4.4" />
-
-  <!-- Non-Nexus Devices -->
-  <project path="device/htc/vigor" name="device_htc_vigor" />
-  <project path="device/htc/msm8660-common" name="android_device_htc_msm8660-common" />
-  <project name="CyanogenMod/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="gh" revision="cm-11.0" />
-  <project name="CyanogenMod/android_device_samsung_msm8960-common" path="device/samsung/msm8960-common" remote="gh" revision="cm-11.0" />
-  <project name="android_device_samsung_apexqtmo" path="device/samsung/apexqtmo" />
-  <project name="android_device_samsung_d2-common" path="device/samsung/d2-common" />
-
-  <!--Nexus Devices -->
-  <project path="device/asus/grouper" name="android_device_asus_grouper" />
-  <project name="android_device_samsung_toro" path="device/samsung/toro" />
-  <project name="android_device_samsung_tuna" path="device/samsung/tuna" />
   
-  <!-- Custom Kernels -->
-  <project path="kernel/htc/vigor" name="vigor_aosp_kernel" />
-  <project path="kernel/samsung/d2" name="android_kernel_samsung_d2" />
-  <project path="kernel/asus/grouper" name="android_kernel_asus_grouper" />
-  <project path="kernel/samsung/tuna" name="CyanogenMod/android_kernel_samsung_tuna" remote="gh" revision="cm-11.0" />
-
   <!-- Superuser -->
   <project path="external/koush/Superuser" name="android_platform_external_koush_superuser" remote="ill" revision="illusion-4.4" />
   <project path="external/koush/Widgets" name="CyanogenMod/Widgets" remote="gh" revision="cm-11.0" />
@@ -84,8 +65,6 @@
   <project path="hardware/qcom/audio-caf" name="android_platform_hardware_qcom_audio-caf" />
   <project path="hardware/qcom/display-caf" name="android_platform_hardware_qcom_display-caf" />
   <project path="hardware/qcom/media-caf" name="android_platform_hardware_qcom_media-caf" />
-  <project path="hardware/qcom/display-legacy" name="android_hardware_qcom_display-legacy" />
-  <project path="hardware/qcom/media-legacy" name="android_hardware_qcom_media-legacy" />
 
   <!-- AOSP repos -->
   <project path="build" name="android_build" >
@@ -358,7 +337,6 @@
   <project path="hardware/qcom/sensors" name="android_platform_hardware_qcom_sensors" groups="qcom" />
   <project path="hardware/qcom/wlan" name="android_platform_hardware_qcom_wlan" groups="qcom_wlan" />
   <project path="hardware/samsung_slsi/exynos5" name="android_platform_hardware_samsung_slsi_exynos5" remote="ill" revision="illusion-4.4" />
-  <project path="hardware/samsung" name="android_platform_hardware_samsung" remote="ill" revision="illusion-4.4" />
   <project path="hardware/ti/omap3" name="android_platform_hardware_ti_omap3" remote="ill" revision="illusion-4.4" />
   <project path="hardware/ti/omap4xxx" name="android_platform_hardware_ti_omap4xxx" remote="ill" revision="illusion-4.4" />
   <project path="hardware/ti/wlan" name="android_platform_hardware_ti_wlan" remote="ill" revision="illusion-4.4" />
