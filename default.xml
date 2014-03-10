@@ -246,6 +246,7 @@
   <project path="external/nist-pkits" name="android_platform_external_nist-pkits" remote="ill" revision="illusion-4.4" />
   <project path="external/nist-sip" name="android_platform_external_nist-sip" remote="ill" revision="illusion-4.4" />
   <project path="external/noto-fonts" name="android_platform_external_noto-fonts" remote="ill" revision="illusion-4.4" />
+  <project path="external/ntfs-3g" name="android_external_ntfs-3g" />
   <project path="external/oauth" name="android_platform_external_oauth" remote="ill" revision="illusion-4.4" />
   <project path="external/objenesis" name="android_platform_external_objenesis" remote="ill" revision="illusion-4.4" />
   <project path="external/okhttp" name="android_platform_external_okhttp" remote="ill" revision="illusion-4.4" />
