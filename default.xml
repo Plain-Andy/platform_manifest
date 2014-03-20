@@ -13,7 +13,7 @@
 	   revision="illusion-4.4" />
 
   <remote  name="apex"
-           fetch="https://github.com/RevenRelay"
+           fetch="https://github.com/ApexRelay"
            review=".." 
 	   revision="cm-11.0" />
 
