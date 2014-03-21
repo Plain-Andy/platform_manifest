@@ -106,7 +106,7 @@
   <project path="device/google/accessory/demokit" name="android_device_google_accessory_demokit" remote="ill" revision="illusion-4.4" />
   <project path="device/sample" name="android_device_sample" remote="ill" revision="illusion-4.4" />
   <project path="docs/source.android.com" name="android_platform_docs_source.android.com" remote="ill" revision="illusion-4.4" />
-  <project path="external/aac" name="android_platform_external_aac" remote="ill" revision="illusion-4.4" />
+  <project path="external/aac" name="CyanogenMod/android_external_aac" remote="gh" revision="cm-11.0" />
   <project path="external/android-clat" name="android_platform_external_android-clat" remote="ill" revision="illusion-4.4" />
   <project path="external/android-mock" name="android_platform_external_android-mock" remote="ill" revision="illusion-4.4" />
   <project path="external/ant-glob" name="android_platform_external_ant-glob" remote="ill" revision="illusion-4.4" />
@@ -258,10 +258,10 @@
   <project path="external/oprofile" name="android_platform_external_oprofile" remote="ill" revision="illusion-4.4" />
   <project path="external/pigz" name="android_platform_external_pigz" remote="ill" revision="illusion-4.4" />
   <project path="external/pixman" name="android_platform_external_pixman" remote="ill" revision="illusion-4.4" />
-  <project path="external/ppp" name="android_platform_external_ppp" remote="ill" revision="illusion-4.4" />
+  <project path="external/ppp" name="CyanogenMod/android_external_ppp" remote="gh" revision="cm-11.0" />
   <project path="external/proguard" name="android_platform_external_proguard" groups="pdk-java" remote="ill" revision="illusion-4.4" />
   <project path="external/protobuf" name="android_platform_external_protobuf" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/qemu" name="android_platform_external_qemu" remote="ill" revision="illusion-4.4" />
+  <project path="external/qemu" name="CyanogenMod/android_external_qemu" remote="gh" revision="cm-11.0" />
   <project path="external/qemu-pc-bios" name="android_platform_external_qemu-pc-bios" remote="ill" revision="illusion-4.4" />
   <project path="external/regex-re2" name="android_platform_external_regex-re2" remote="ill" revision="illusion-4.4" />
   <project path="external/replicaisland" name="android_platform_external_replicaisland" remote="ill" revision="illusion-4.4" />
