@@ -172,7 +172,7 @@
   <project path="external/expat" name="android_platform_external_expat" remote="ill" revision="illusion-4.4" />
   <project path="external/eyes-free" name="android_platform_external_eyes-free" remote="ill" revision="illusion-4.4" />
   <project path="external/fdlibm" name="android_platform_external_fdlibm" remote="ill" revision="illusion-4.4" />
-  <project path="external/flac" name="android_platform_external_flac" remote="ill" revision="illusion-4.4" />
+  <project path="external/flac" name="CyanogenMod/android_external_flac" remote="gh" revision="cm-11.0" />
   <project path="external/freetype" name="android_platform_external_freetype" remote="ill" revision="illusion-4.4" />
   <project path="external/fsck_msdos" name="android_platform_external_fsck_msdos" remote="ill" revision="illusion-4.4" />
   <project path="external/ganymed-ssh2" name="android_platform_external_ganymed-ssh2" remote="ill" revision="illusion-4.4" />
