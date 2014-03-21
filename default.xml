@@ -182,7 +182,7 @@
   <project path="external/google-diff-match-patch" name="android_platform_external_google-diff-match-patch" remote="ill" revision="illusion-4.4" />
   <project path="external/grub" name="android_platform_external_grub" remote="ill" revision="illusion-4.4" />
   <project path="external/gtest" name="android_platform_external_gtest" remote="ill" revision="illusion-4.4" />
-  <project path="external/guava" name="android_platform_external_guava" remote="ill" revision="illusion-4.4" />
+  <project path="external/guava" name="CyanogenMod/android_external_guava" remote="gh" revision="cm-11.0" />
   <project path="external/hamcrest" name="android_platform_external_hamcrest" remote="ill" revision="illusion-4.4" />
   <project path="external/harfbuzz" name="android_platform_external_harfbuzz" remote="ill" revision="illusion-4.4" />
   <project path="external/harfbuzz_ng" name="android_platform_external_harfbuzz_ng" remote="ill" revision="illusion-4.4" />
