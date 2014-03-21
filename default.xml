@@ -11,6 +11,11 @@
            fetch="https://github.com/IllusionRom"
            review="illugerrit.bricked.de/" 
 	   revision="illusion-4.4" />
+	   
+  <remote  name="cm"
+           fetch="https://github.com/CyanogenMod"
+           review="review.cyanogenmod.org" 
+           revision="cm-11.0" />
 
   <remote  name="apex"
            fetch="https://github.com/ApexRelay"
@@ -106,7 +111,7 @@
   <project path="device/google/accessory/demokit" name="android_device_google_accessory_demokit" remote="ill" revision="illusion-4.4" />
   <project path="device/sample" name="android_device_sample" remote="ill" revision="illusion-4.4" />
   <project path="docs/source.android.com" name="android_platform_docs_source.android.com" remote="ill" revision="illusion-4.4" />
-  <project path="external/aac" name="CyanogenMod/android_external_aac" remote="gh" revision="cm-11.0" />
+  <project path="external/aac" name="android_external_aac" remote="cm" revision="cm-11.0" />
   <project path="external/android-clat" name="android_platform_external_android-clat" remote="ill" revision="illusion-4.4" />
   <project path="external/android-mock" name="android_platform_external_android-mock" remote="ill" revision="illusion-4.4" />
   <project path="external/ant-glob" name="android_platform_external_ant-glob" remote="ill" revision="illusion-4.4" />
@@ -172,7 +177,7 @@
   <project path="external/expat" name="android_platform_external_expat" remote="ill" revision="illusion-4.4" />
   <project path="external/eyes-free" name="android_platform_external_eyes-free" remote="ill" revision="illusion-4.4" />
   <project path="external/fdlibm" name="android_platform_external_fdlibm" remote="ill" revision="illusion-4.4" />
-  <project path="external/flac" name="CyanogenMod/android_external_flac" remote="gh" revision="cm-11.0" />
+  <project path="external/flac" name="android_external_flac" remote="cm" revision="cm-11.0" />
   <project path="external/freetype" name="android_platform_external_freetype" remote="ill" revision="illusion-4.4" />
   <project path="external/fsck_msdos" name="android_platform_external_fsck_msdos" remote="ill" revision="illusion-4.4" />
   <project path="external/ganymed-ssh2" name="android_platform_external_ganymed-ssh2" remote="ill" revision="illusion-4.4" />
@@ -182,7 +187,7 @@
   <project path="external/google-diff-match-patch" name="android_platform_external_google-diff-match-patch" remote="ill" revision="illusion-4.4" />
   <project path="external/grub" name="android_platform_external_grub" remote="ill" revision="illusion-4.4" />
   <project path="external/gtest" name="android_platform_external_gtest" remote="ill" revision="illusion-4.4" />
-  <project path="external/guava" name="CyanogenMod/android_external_guava" remote="gh" revision="cm-11.0" />
+  <project path="external/guava" name="android_external_guava" remote="cm" revision="cm-11.0" />
   <project path="external/hamcrest" name="android_platform_external_hamcrest" remote="ill" revision="illusion-4.4" />
   <project path="external/harfbuzz" name="android_platform_external_harfbuzz" remote="ill" revision="illusion-4.4" />
   <project path="external/harfbuzz_ng" name="android_platform_external_harfbuzz_ng" remote="ill" revision="illusion-4.4" />
@@ -258,10 +263,10 @@
   <project path="external/oprofile" name="android_platform_external_oprofile" remote="ill" revision="illusion-4.4" />
   <project path="external/pigz" name="android_platform_external_pigz" remote="ill" revision="illusion-4.4" />
   <project path="external/pixman" name="android_platform_external_pixman" remote="ill" revision="illusion-4.4" />
-  <project path="external/ppp" name="CyanogenMod/android_external_ppp" remote="gh" revision="cm-11.0" />
+  <project path="external/ppp" name="android_external_ppp" remote="cm" revision="cm-11.0" />
   <project path="external/proguard" name="android_platform_external_proguard" groups="pdk-java" remote="ill" revision="illusion-4.4" />
   <project path="external/protobuf" name="android_platform_external_protobuf" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/qemu" name="CyanogenMod/android_external_qemu" remote="gh" revision="cm-11.0" />
+  <project path="external/qemu" name="android_external_qemu" remote="cm" revision="cm-11.0" />
   <project path="external/qemu-pc-bios" name="android_platform_external_qemu-pc-bios" remote="ill" revision="illusion-4.4" />
   <project path="external/regex-re2" name="android_platform_external_regex-re2" remote="ill" revision="illusion-4.4" />
   <project path="external/replicaisland" name="android_platform_external_replicaisland" remote="ill" revision="illusion-4.4" />
