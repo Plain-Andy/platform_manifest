@@ -69,7 +69,6 @@
   <!-- Others -->
   <project name="CyanogenMod/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="gh" revision="cm-11.0" />
   <project name="CyanogenMod/android_device_samsung_msm8960-common" path="device/samsung/msm8960-common" remote="gh" revision="cm-11.0" />
-  <project path="hardware/msm7k" name="CyanogenMod/android_hardware_msm7k" remote="gh" revision="cm-10.2" />
   <project path="hardware/ril" name="CyanogenMod/android_hardware_ril" remote="gh" revision="cm-11.0" />
   <project path="system/extras" name="CyanogenMod/android_system_extras" remote="gh" revision="cm-11.0" />
   <project path="system/vold" name="CyanogenMod/android_system_vold" remote="gh" revision="cm-11.0" />
@@ -78,9 +77,9 @@
   <project path="vendor/tmobile/providers/ThemeManager" name="CyanogenMod/android_vendor_tmobile_providers_ThemeManager"  remote="gh" revision="cm-11.0" />
 
   <!-- Caf -->
-  <project path="hardware/qcom/audio-caf" name="android_platform_hardware_qcom_audio-caf" />
-  <project path="hardware/qcom/display-caf" name="android_platform_hardware_qcom_display-caf" />
-  <project path="hardware/qcom/media-caf" name="android_platform_hardware_qcom_media-caf" />
+  <project path="hardware/qcom/audio-caf" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_audio-caf" />
+  <project path="hardware/qcom/display-caf" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_display-caf" />
+  <project path="hardware/qcom/media-caf" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_media-caf" />
 
   <!-- AOSP repos -->
   <project path="build" name="android_build" >
@@ -336,28 +335,30 @@
   <project path="frameworks/volley" name="android_platform_frameworks_volley" />
   <project path="frameworks/webview" name="android_platform_frameworks_webview" />
   <project path="frameworks/wilhelm" name="android_platform_frameworks_wilhelm" />
-  <project path="hardware/akm" name="android_platform_hardware_akm" />
-  <project path="hardware/broadcom/libbt" name="CyanogenMod/android_hardware_broadcom_libbt" remote="gh" revision="cm-11.0" />
-  <project path="hardware/broadcom/wlan" name="CyanogenMod/android_hardware_broadcom_wlan" remote="gh" revision="cm-11.0" />
-  <project path="hardware/invensense" name="android_platform_hardware_invensense" /> 
-  <project path="hardware/libhardware" name="android_platform_hardware_libhardware" groups="pdk" />
-  <project path="hardware/libhardware_legacy" name="android_platform_hardware_libhardware_legacy" groups="pdk" />
-  <project path="hardware/qcom/audio" name="android_platform_hardware_qcom_audio" groups="qcom" />
-  <project path="hardware/qcom/bt" name="android_platform_hardware_qcom_bt" groups="qcom" />
-  <project path="hardware/qcom/camera" name="android_platform_hardware_qcom_camera" groups="qcom" />
-  <project path="hardware/qcom/display" name="android_platform_hardware_qcom_display" groups="qcom" />
-  <project path="hardware/qcom/keymaster" name="android_platform_hardware_qcom_keymaster" groups="qcom" />
-  <project path="hardware/qcom/media" name="android_platform_hardware_qcom_media" groups="qcom" />
-  <project path="hardware/qcom/msm8960" name="android_platform_hardware_qcom_msm8960" groups="qcom_msm8960" />
-  <project path="hardware/qcom/msm8x74" name="android_platform_hardware_qcom_msm8x74" groups="qcom_msm8x74" />
-  <project path="hardware/qcom/power" name="android_platform_hardware_qcom_power" groups="qcom" />
-  <project path="hardware/qcom/sensors" name="android_platform_hardware_qcom_sensors" groups="qcom" />
-  <project path="hardware/qcom/wlan" name="android_platform_hardware_qcom_wlan" groups="qcom_wlan" />
-  <project path="hardware/samsung_slsi/exynos5" name="android_platform_hardware_samsung_slsi_exynos5" remote="ill" revision="illusion-4.4" />
-  <project path="hardware/ti/omap3" name="android_platform_hardware_ti_omap3" remote="ill" revision="illusion-4.4" />
-  <project path="hardware/ti/omap4xxx" name="android_platform_hardware_ti_omap4xxx" remote="ill" revision="illusion-4.4" />
-  <project path="hardware/ti/wlan" name="android_platform_hardware_ti_wlan" remote="ill" revision="illusion-4.4" />
-  <project path="hardware/ti/wpan" name="android_platform_hardware_ti_wpan" remote="ill" revision="illusion-4.4" />
+  <project path="hardware/akm" remote="ill" revision="illusion-4.4" name="android_platform_hardware_akm" />
+  <project path="hardware/broadcom/libbt" remote="ill" revision="illusion-4.4" name="android_platform_hardware_broadcom_libbt" groups="pdk" />
+  <project path="hardware/broadcom/wlan" remote="ill" revision="illusion-4.4" name="android_platform_hardware_broadcom_wlan" groups="broadcom_wlan" />
+  <project path="hardware/invensense" remote="ill" revision="illusion-4.4" name="android_platform_hardware_invensense" groups="invensense" />
+  <project path="hardware/libhardware" remote="ill" revision="illusion-4.4" name="android_platform_hardware_libhardware" groups="pdk" />
+  <project path="hardware/libhardware_legacy" remote="ill" revision="illusion-4.4" name="android_platform_hardware_libhardware_legacy" groups="pdk" />
+  <project path="hardware/qcom/audio" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_audio" groups="qcom" />
+  <project path="hardware/qcom/bt" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_bt" groups="qcom" />
+  <project path="hardware/qcom/camera" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_camera" groups="qcom" />
+  <project path="hardware/qcom/display" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_display" groups="qcom" />
+  <project path="hardware/qcom/gps" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_gps" groups="qcom" />
+  <project path="hardware/qcom/keymaster" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_keymaster" groups="qcom" />
+  <project path="hardware/qcom/media" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_media" groups="qcom" />
+  <project path="hardware/qcom/msm8960" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_msm8960" groups="qcom_msm8960" />
+  <project path="hardware/qcom/msm8x74" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_msm8x74" groups="qcom_msm8x74" />
+  <project path="hardware/qcom/power" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_power" groups="qcom" />
+  <project path="hardware/qcom/sensors" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_sensors" groups="qcom" />
+  <project path="hardware/qcom/wlan" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_wlan" groups="qcom_wlan" />
+  <project path="hardware/samsung_slsi/exynos5" remote="ill" revision="illusion-4.4" name="android_platform_hardware_samsung_slsi_exynos5" groups="exynos5" />
+  <project path="hardware/samsung" remote="ill" revision="illusion-4.4" name="android_platform_hardware_samsung" />
+  <project path="hardware/ti/omap3" remote="ill" revision="illusion-4.4" name="android_platform_hardware_ti_omap3" />
+  <project path="hardware/ti/omap4xxx" remote="ill" revision="illusion-4.4" name="android_platform_hardware_ti_omap4xxx" groups="omap4" />
+  <project path="hardware/ti/wlan" remote="ill" revision="illusion-4.4" name="android_platform_hardware_ti_wlan" />
+  <project path="hardware/ti/wpan" remote="ill" revision="illusion-4.4" name="android_platform_hardware_ti_wpan" />
   <project path="libcore" name="android_platform_libcore" />
   <project path="libnativehelper" name="android_platform_libnativehelper" groups="pdk-java" />
   <project path="ndk" name="android_platform_ndk" />
