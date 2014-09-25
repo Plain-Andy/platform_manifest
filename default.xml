@@ -1,499 +1,508 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <remote  name="aosp"
+           fetch="https://android.googlesource.com/"
+           review="https://android-review.googlesource.com/" />
+           
   <remote  name="gh"
            fetch="https://github.com/" />
-
-  <remote  name="github"
-           fetch=".." />
-
-  <remote  name="ill"
-           fetch="https://github.com/IllusionRom"
-           review="illugerrit.bricked.de/" 
-	   revision="illusion-4.4" />
-	   
-  <remote  name="cm"
-           fetch="https://github.com/CyanogenMod"
-           review="review.cyanogenmod.org"
-           revision="cm-11.0" />
-
-  <remote  name="apex"
-           fetch="https://github.com/RevenRelay"
-           review=".." 
-	   revision="cm-11.0" />
-
+           
   <remote  name="plain"
-           fetch="https://github.com/Plain-Andy"
-           review=".." 
-	   revision="kk" />
+           fetch="https://github.com/Plain-Andy/"
+           />
+           
+  <remote  name="aokp"
+           fetch="https://github.com/"
+           review="gerrit.aokp.co" />
 
-  <default remote="plain"
-           revision="kk"
+  <remote  name="cm"
+           fetch="https://github.com/"
+           review="review.cyanogenmod.org" />
+
+  <remote name="omni"
+           fetch="https://github.com/omnirom"
+           review="gerrit.omnirom.org" />
+
+  <default revision="refs/tags/android-4.4.4_r2"
+           remote="aosp"
+           sync-c="true"
            sync-j="4" />
 
-  <!-- Manifest -->
-  <project path="manifest" name="platform_manifest" />
-
-  <!-- Vendors -->
-  <project path="vendor/plain" name="android_platform_vendor_plain" />
-  <project path="vendor/lge" name="android_platform_vendor_lge" />
-  <project path="vendor/broadcom" name="android_platform_vendor_broadcom" />
-  <project path="vendor/qcom" name="android_platform_vendor_qcom" />
-  <project path="vendor/samsung" name="TheMuppets/proprietary_vendor_samsung" remote="gh" revision="cm-11.0" />
-  <project path="vendor/asus" name="TheMuppets/proprietary_vendor_asus" remote="gh" revision="cm-11.0" />
-  <project path="vendor/htc" name="android_platform_vendor_htc"/>
-  <project path="vendor/elan" name="TheMuppets/proprietary_vendor_elan" remote="gh" revision="cm-11.0" />
-  <project path="vendor/invensense" name="TheMuppets/proprietary_vendor_invensense" remote="gh" revision="cm-11.0" />
-  <project path="vendor/nvidia" name="TheMuppets/proprietary_vendor_nvidia" remote="gh" revision="cm-11.0" />
-  <project path="vendor/nxp" name="TheMuppets/proprietary_vendor_nxp" remote="gh" revision="cm-11.0" />
-  <project path="vendor/widevine" name="TheMuppets/proprietary_vendor_widevine" remote="gh" revision="cm-11.0" />
-
-  <!-- Illusion Additions -->
-  <project path="packages/apps/Torch" name="android_platform_packages_apps_Torch" remote="ill" revision="illusion-4.4" />
-  <project path="packages/apps/PerformanceControl" name="android_platform_packages_apps_PerformanceControl" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/linux-x86/arm/custom-4.7" name="android_platform_prebuilts_gcc_linux-x86_arm_boosted-arm-eabi-4.7" remote="ill" revision="illusion-4.4" />
-
-  <!-- Non-Nexus Devices -->
-  <project path="device/htc/vigor" name="device_htc_vigor" />
-  <project path="device/samsung/apexqtmo" name="android_device_samsung_apexqtmo" />
-  <project path="device/samsung/d2lte" name="android_device_samsung_d2lte" />
- 
-  <!--Nexus Devices -->
-  <project path="device/asus/grouper" name="android_device_asus_grouper" />
-  <project name="android_device_samsung_toro" path="device/samsung/toro" />
-  
-  <!-- Superuser -->
-  <project path="external/koush/Superuser" name="android_platform_external_koush_superuser" remote="ill" revision="illusion-4.4" />
-  <project path="external/koush/Widgets" name="CyanogenMod/Widgets" remote="gh" revision="cm-11.0" />
-
-  <!-- Others -->
-  <project name="CyanogenMod/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="gh" revision="cm-11.0" />
-  <project name="CyanogenMod/android_device_samsung_msm8960-common" path="device/samsung/msm8960-common" remote="gh" revision="cm-11.0" />
-  <project path="hardware/ril" name="CyanogenMod/android_hardware_ril" remote="gh" revision="cm-11.0" />
-  <project path="system/extras" name="CyanogenMod/android_system_extras" remote="gh" revision="cm-11.0" />
-  <project path="system/vold" name="CyanogenMod/android_system_vold" remote="gh" revision="cm-11.0" />
-  <project path="vendor/tmobile/apps/ThemeChooser" name="CyanogenMod/themes-platform-vendor-tmobile-apps-ThemeChooser"  remote="gh" revision="cm-11.0" />
-  <project path="vendor/tmobile/libs/com.tmobile.themes" name="CyanogenMod/android_vendor_tmobile_libs_com.tmobile.themes"  remote="gh" revision="cm-11.0" />
-  <project path="vendor/tmobile/providers/ThemeManager" name="CyanogenMod/android_vendor_tmobile_providers_ThemeManager"  remote="gh" revision="cm-11.0" />
-
-  <!-- Caf -->
-  <project path="hardware/qcom/audio-caf" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_audio-caf" />
-  <project path="hardware/qcom/display-caf" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_display-caf" />
-  <project path="hardware/qcom/media-caf" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_media-caf" />
-
-  <!-- AOSP repos -->
-  <project path="build" name="android_build" >
+  <project path="build" name="android_build" remote="plain" revision="kk">
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="abi/cpp" name="android_platform_abi_cpp"/>
-  <project path="art" name="android_platform_art" />
-  <project path="bionic" name="android_platform_bionic" />
-  <project path="bootable/bootloader/legacy" name="android_platform_bootable_bootloader_legacy" />
-  <project path="bootable/diskinstaller" name="android_platform_bootable_diskinstaller" />
-  <project path="bootable/recovery" name="android_platform_bootable_recovery" />
-  <project path="cts" name="android_platform_cts" groups="cts" />
-  <project path="dalvik" name="android_platform_dalvik" />
-  <project path="developers/build" name="android_platform_developers_build" />
-  <project path="developers/demos" name="android_platform_developers_demos" />
-  <project path="developers/docs" name="android_platform_developers_docs" />
-  <project path="developers/samples/android" name="android_platform_developers_samples_android" />
-  <project path="development" name="android_platform_development" />
-  <project path="device/common" name="android_device_common" />
-  <project path="device/generic/armv7-a-neon" name="android_device_generic_armv7-a-neon" />
-  <project path="device/generic/common" name="android_device_generic_common" remote="ill" revision="illusion-4.4" />
-  <project path="device/generic/goldfish" name="android_device_generic_goldfish" remote="ill" revision="illusion-4.4" />
-  <project path="device/generic/mips" name="android_device_generic_mips" remote="ill" revision="illusion-4.4" />
-  <project path="device/generic/mini-emulator-armv7-a-neon" name="android_device_generic_mini-emulator-armv7-a-neon" remote="ill" revision="illusion-4.4" />
-  <project path="device/generic/mini-emulator-mips" name="android_device_generic_mini-emulator-mips" remote="ill" revision="illusion-4.4" />
-  <project path="device/generic/mini-emulator-x86" name="android_device_generic_mini-emulator-x86" remote="ill" revision="illusion-4.4" />
-  <project path="device/generic/x86" name="android_device_generic_x86" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="device/google/accessory/arduino" name="android_device_google_accessory_arduino" remote="ill" revision="illusion-4.4" />
-  <project path="device/google/accessory/demokit" name="android_device_google_accessory_demokit" remote="ill" revision="illusion-4.4" />
-  <project path="device/sample" name="android_device_sample" remote="ill" revision="illusion-4.4" />
-  <project path="docs/source.android.com" name="android_platform_docs_source.android.com" remote="ill" revision="illusion-4.4" />
-  <project path="external/aac" name="android_external_aac" remote="cm" revision="cm-11.0" />
-  <project path="external/android-clat" name="android_platform_external_android-clat" remote="ill" revision="illusion-4.4" />
-  <project path="external/android-mock" name="android_platform_external_android-mock" remote="ill" revision="illusion-4.4" />
-  <project path="external/ant-glob" name="android_platform_external_ant-glob" remote="ill" revision="illusion-4.4" />
-  <project path="external/antlr" name="android_platform_external_antlr" remote="ill" revision="illusion-4.4" />
-  <project path="external/apache-harmony" name="android_platform_external_apache-harmony" remote="ill" revision="illusion-4.4" />
-  <project path="external/apache-http" name="android_platform_external_apache-http" remote="ill" revision="illusion-4.4" />
-  <project path="external/apache-qp" name="android_platform_external_apache-qp" remote="ill" revision="illusion-4.4" />
-  <project path="external/apache-xml" name="android_platform_external_apache-xml" remote="ill" revision="illusion-4.4" />
-  <project path="external/arduino" name="android_platform_external_arduino" remote="ill" revision="illusion-4.4" />
-  <project path="external/bison" name="android_platform_external_bison" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/blktrace" name="android_platform_external_blktrace" remote="ill" revision="illusion-4.4" />
-  <project path="external/bluetooth/bluedroid" name="android_platform_external_bluetooth_bluedroid" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/bouncycastle" name="android_platform_external_bouncycastle" remote="ill" revision="illusion-4.4" />
-  <project path="external/bsdiff" name="android_platform_external_bsdiff" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/busybox" name="android_platform_external_busybox" remote="ill" revision="illusion-4.4" />
-  <project path="external/bzip2" name="android_platform_external_bzip2" remote="ill" revision="illusion-4.4" />
-  <project path="external/ceres-solver" name="android_platform_external_ceres-solver" remote="ill" revision="illusion-4.4" />
-  <project path="external/checkpolicy" name="android_platform_external_checkpolicy" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium" name="android_platform_external_chromium" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium-libpac" name="android_platform_external_chromium-libpac" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium-trace" name="android_platform_external_chromium-trace" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org" name="android_platform_external_chromium_org" />
-  <project path="external/chromium_org/sdch/open-vcdiff" name="android_platform_external_chromium_org_sdch_open-vcdiff" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org/testing/gtest" name="android_platform_external_chromium_org_testing_gtest" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org/third_party/WebKit" name="android_platform_external_chromium_org_third_party_WebKit" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org/third_party/angle_dx11" name="android_platform_external_chromium_org_third_party_angle_dx11" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org/third_party/eyesfree/src/android/java/src/com/googlecode/eyesfree/braille" name="android_platform_external_chromium_org_third_party_eyesfree_src_android_java_src_com_googlecode_eyes" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org/third_party/freetype" name="android_platform_external_chromium_org_third_party_freetype" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org/third_party/icu" name="android_platform_external_chromium_org_third_party_icu" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org/third_party/leveldatabase/src" name="android_platform_external_chromium_org_third_party_leveldatabase_src" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org/third_party/libjingle/source/talk" name="android_platform_external_chromium_org_third_party_libjingle_source_talk" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org/third_party/libphonenumber/src/phonenumbers" name="android_platform_external_chromium_org_third_party_libphonenumber_src_phonenumbers" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org/third_party/libphonenumber/src/resources" name="android_platform_external_chromium_org_third_party_libphonenumber_src_resources" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org/third_party/mesa/src" name="android_platform_external_chromium_org_third_party_mesa_src" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org/third_party/openssl" name="android_platform_external_chromium_org_third_party_openssl" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org/third_party/opus/src" name="android_platform_external_chromium_org_third_party_opus_src" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org/third_party/ots" name="android_platform_external_chromium_org_third_party_ots" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org/third_party/skia/gyp" name="android_platform_external_chromium_org_third_party_skia_gyp" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org/third_party/skia/include" name="android_platform_external_chromium_org_third_party_skia_include" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org/third_party/skia/src" name="android_platform_external_chromium_org_third_party_skia_src" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org/third_party/smhasher/src" name="android_platform_external_chromium_org_third_party_smhasher_src" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org/third_party/yasm/source/patched-yasm" name="android_platform_external_chromium_org_third_party_yasm_source_patched-yasm" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org/tools/grit" name="android_platform_external_chromium_org_tools_grit" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org/tools/gyp" name="android_platform_external_chromium_org_tools_gyp" remote="ill" revision="illusion-4.4" />
-  <project path="external/chromium_org/v8" name="android_platform_external_chromium_org_v8" remote="ill" revision="illusion-4.4" />
-  <project path="external/clang" name="android_platform_external_clang" remote="ill" revision="illusion-4.4" />
-  <project path="external/compiler-rt" name="android_platform_external_compiler-rt" remote="ill" revision="illusion-4.4" />
-  <project path="external/dexmaker" name="android_platform_external_dexmaker" remote="ill" revision="illusion-4.4" />
-  <project path="external/dhcpcd" name="android_platform_external_dhcpcd" remote="ill" revision="illusion-4.4" />
-  <project path="external/dnsmasq" name="android_platform_external_dnsmasq" remote="ill" revision="illusion-4.4" />
-  <project path="external/doclava" name="android_platform_external_doclava" remote="ill" revision="illusion-4.4" />
-  <project path="external/dropbear" name="android_platform_external_dropbear" remote="ill" revision="illusion-4.4" />
-  <project path="external/droiddriver" name="android_platform_external_droiddriver" remote="ill" revision="illusion-4.4" />
-  <project path="external/e2fsprogs" name="android_platform_external_e2fsprogs" remote="ill" revision="illusion-4.4" />
-  <project path="external/easymock" name="android_platform_external_easymock" remote="ill" revision="illusion-4.4" />
-  <project path="external/eclipse-basebuilder" name="android_platform_external_eclipse-basebuilder" remote="ill" revision="illusion-4.4" />
-  <project path="external/eclipse-windowbuilder" name="android_platform_external_eclipse-windowbuilder" remote="ill" revision="illusion-4.4" />
-  <project path="external/eigen" name="android_platform_external_eigen" remote="ill" revision="illusion-4.4" />
-  <project path="external/elfutils" name="android_platform_external_elfutils" remote="ill" revision="illusion-4.4" />
-  <project path="external/embunit" name="android_platform_external_embunit" remote="ill" revision="illusion-4.4" />
-  <project path="external/emma" name="android_platform_external_emma" remote="ill" revision="illusion-4.4" />
-  <project path="external/esd" name="android_platform_external_esd" remote="ill" revision="illusion-4.4" />
-  <project path="external/expat" name="android_platform_external_expat" remote="ill" revision="illusion-4.4" />
-  <project path="external/eyes-free" name="android_platform_external_eyes-free" remote="ill" revision="illusion-4.4" />
-  <project path="external/fdlibm" name="android_platform_external_fdlibm" remote="ill" revision="illusion-4.4" />
-  <project path="external/flac" name="android_external_flac" remote="cm" revision="cm-11.0" />
-  <project path="external/freetype" name="android_platform_external_freetype" remote="ill" revision="illusion-4.4" />
-  <project path="external/fsck_msdos" name="android_platform_external_fsck_msdos" remote="ill" revision="illusion-4.4" />
-  <project path="external/ganymed-ssh2" name="android_platform_external_ganymed-ssh2" remote="ill" revision="illusion-4.4" />
-  <project path="external/gcc-demangle" name="android_platform_external_gcc-demangle" remote="ill" revision="illusion-4.4" />
-  <project path="external/genext2fs" name="android_platform_external_genext2fs" remote="ill" revision="illusion-4.4" />
-  <project path="external/giflib" name="android_platform_external_giflib" remote="ill" revision="illusion-4.4" />
-  <project path="external/google-diff-match-patch" name="android_platform_external_google-diff-match-patch" remote="ill" revision="illusion-4.4" />
-  <project path="external/grub" name="android_platform_external_grub" remote="ill" revision="illusion-4.4" />
-  <project path="external/gtest" name="android_platform_external_gtest" remote="ill" revision="illusion-4.4" />
-  <project path="external/guava" name="android_external_guava" remote="cm" revision="cm-11.0" />
-  <project path="external/hamcrest" name="android_platform_external_hamcrest" remote="ill" revision="illusion-4.4" />
-  <project path="external/harfbuzz" name="android_platform_external_harfbuzz" remote="ill" revision="illusion-4.4" />
-  <project path="external/harfbuzz_ng" name="android_platform_external_harfbuzz_ng" remote="ill" revision="illusion-4.4" />
-  <project path="external/hyphenation" name="android_platform_external_hyphenation" remote="ill" revision="illusion-4.4" />
-  <project path="external/icu4c" name="android_platform_external_icu4c" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/iproute2" name="android_platform_external_iproute2" remote="ill" revision="illusion-4.4" />
-  <project path="external/ipsec-tools" name="android_platform_external_ipsec-tools" remote="ill" revision="illusion-4.4" />
-  <project path="external/iptables" name="android_platform_external_iptables" remote="ill" revision="illusion-4.4" />
-  <project path="external/iputils" name="android_platform_external_iputils" remote="ill" revision="illusion-4.4" />
-  <project path="external/jack" name="android_platform_external_jack" remote="ill" revision="illusion-4.4" />
-  <project path="external/javasqlite" name="android_platform_external_javasqlite" remote="ill" revision="illusion-4.4" />
-  <project path="external/javassist" name="android_platform_external_javassist" remote="ill" revision="illusion-4.4" />
-  <project path="external/jdiff" name="android_platform_external_jdiff" remote="ill" revision="illusion-4.4" />
-  <project path="external/jhead" name="android_platform_external_jhead" remote="ill" revision="illusion-4.4" />
-  <project path="external/jmdns" name="android_platform_external_jmdns" remote="ill" revision="illusion-4.4" />
-  <project path="external/jmonkeyengine" name="android_platform_external_jmonkeyengine" remote="ill" revision="illusion-4.4" />
-  <project path="external/jpeg" name="android_platform_external_jpeg" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/jsilver" name="android_platform_external_jsilver" remote="ill" revision="illusion-4.4" />
-  <project path="external/jsr305" name="android_platform_external_jsr305" remote="ill" revision="illusion-4.4" />
-  <project path="external/junit" name="android_platform_external_junit" remote="ill" revision="illusion-4.4" />
-  <project path="external/kernel-headers" name="android_platform_external_kernel-headers" remote="ill" revision="illusion-4.4" />
-  <project path="external/libcap-ng" name="android_platform_external_libcap-ng" remote="ill" revision="illusion-4.4" />
-  <project path="external/libffi" name="android_platform_external_libffi" remote="ill" revision="illusion-4.4" />
-  <project path="external/libgsm" name="android_platform_external_libgsm" remote="ill" revision="illusion-4.4" />
-  <project path="external/liblzf" name="android_platform_external_liblzf" remote="ill" revision="illusion-4.4" />
-  <project path="external/libmtp" name="android_platform_external_libmtp" remote="ill" revision="illusion-4.4" />
-  <project path="external/libnfc-nci" name="android_platform_external_libnfc-nci" remote="ill" revision="illusion-4.4" />
-  <project path="external/libnfc-nxp" name="android_platform_external_libnfc-nxp" remote="ill" revision="illusion-4.4" />
-  <project path="external/libnl-headers" name="android_platform_external_libnl-headers" remote="ill" revision="illusion-4.4" />
-  <project path="external/libogg" name="android_platform_external_libogg" remote="ill" revision="illusion-4.4" />
-  <project path="external/libpcap" name="android_platform_external_libpcap" remote="ill" revision="illusion-4.4" />
-  <project path="external/libphonenumber" name="android_platform_external_libphonenumber" remote="ill" revision="illusion-4.4" />
-  <project path="external/libpng" name="android_platform_external_libpng" remote="ill" revision="illusion-4.4" />
-  <project path="external/libppp" name="android_platform_external_libppp" remote="ill" revision="illusion-4.4" />
-  <project path="external/libselinux" name="android_platform_external_libselinux" remote="ill" revision="illusion-4.4" />
-  <project path="external/libsepol" name="android_platform_external_libsepol" remote="ill" revision="illusion-4.4" />
-  <project path="external/libusb" name="android_platform_external_libusb" remote="ill" revision="illusion-4.4" />
-  <project path="external/libusb-compat" name="android_platform_external_libusb-compat" remote="ill" revision="illusion-4.4" />
-  <project path="external/libvorbis" name="android_platform_external_libvorbis" remote="ill" revision="illusion-4.4" />
-  <project path="external/libvpx" name="android_platform_external_libvpx" remote="ill" revision="illusion-4.4" />
-  <project path="external/libxml2" name="android_platform_external_libxml2" remote="ill" revision="illusion-4.4" />
-  <project path="external/libxslt" name="android_platform_external_libxslt" remote="ill" revision="illusion-4.4" />
-  <project path="external/libyuv" name="android_platform_external_libyuv" remote="ill" revision="illusion-4.4" />
-  <project path="external/linux-tools-perf" name="android_platform_external_linux-tools-perf" remote="ill" revision="illusion-4.4" />
-  <project path="external/littlemock" name="android_platform_external_littlemock" remote="ill" revision="illusion-4.4" />
-  <project path="external/llvm" name="android_platform_external_llvm" remote="ill" revision="illusion-4.4" />
-  <project path="external/lzma" name="android_platform_external_lzma" remote="ill" revision="illusion-4.4" />
-  <project path="external/marisa-trie" name="android_platform_external_marisa-trie" remote="ill" revision="illusion-4.4" />
-  <project path="external/markdown" name="android_platform_external_markdown" remote="ill" revision="illusion-4.4" />
-  <project path="external/mdnsresponder" name="android_platform_external_mdnsresponder" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/mesa3d" name="android_platform_external_mesa3d" remote="ill" revision="illusion-4.4" />
-  <project path="external/mksh" name="android_platform_external_mksh" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/mockito" name="android_platform_external_mockito" remote="ill" revision="illusion-4.4" />
-  <project path="external/mockwebserver" name="android_platform_external_mockwebserver" remote="ill" revision="illusion-4.4" />
-  <project path="external/mp4parser" name="android_platform_external_mp4parser" remote="ill" revision="illusion-4.4" />
-  <project path="external/mtpd" name="android_platform_external_mtpd" remote="ill" revision="illusion-4.4" />
-  <project path="external/naver-fonts" name="android_platform_external_naver-fonts" remote="ill" revision="illusion-4.4" />
-  <project path="external/netcat" name="android_platform_external_netcat" remote="ill" revision="illusion-4.4" />
-  <project path="external/netperf" name="android_platform_external_netperf" remote="ill" revision="illusion-4.4" />
-  <project path="external/neven" name="android_platform_external_neven" remote="ill" revision="illusion-4.4" />
-  <project path="external/nist-pkits" name="android_platform_external_nist-pkits" remote="ill" revision="illusion-4.4" />
-  <project path="external/nist-sip" name="android_platform_external_nist-sip" remote="ill" revision="illusion-4.4" />
-  <project path="external/noto-fonts" name="android_platform_external_noto-fonts" remote="ill" revision="illusion-4.4" />
-  <project path="external/ntfs-3g" name="android_external_ntfs-3g" />
-  <project path="external/oauth" name="android_platform_external_oauth" remote="ill" revision="illusion-4.4" />
-  <project path="external/objenesis" name="android_platform_external_objenesis" remote="ill" revision="illusion-4.4" />
-  <project path="external/okhttp" name="android_platform_external_okhttp" remote="ill" revision="illusion-4.4" />
-  <project path="external/open-vcdiff" name="android_platform_external_open-vcdiff" remote="ill" revision="illusion-4.4" />
-  <project path="external/opencv" name="android_platform_external_opencv" remote="ill" revision="illusion-4.4" />
-  <project path="external/openfst" name="android_platform_external_openfst" remote="ill" revision="illusion-4.4" />
-  <project path="external/openssh" name="android_platform_external_openssh" remote="ill" revision="illusion-4.4" />
-  <project path="external/openssl" name="android_platform_external_openssl" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/oprofile" name="android_platform_external_oprofile" remote="ill" revision="illusion-4.4" />
-  <project path="external/pigz" name="android_platform_external_pigz" remote="ill" revision="illusion-4.4" />
-  <project path="external/pixman" name="android_platform_external_pixman" remote="ill" revision="illusion-4.4" />
-  <project path="external/ppp" name="android_external_ppp" remote="cm" revision="cm-11.0" />
-  <project path="external/proguard" name="android_platform_external_proguard" groups="pdk-java" remote="ill" revision="illusion-4.4" />
-  <project path="external/protobuf" name="android_platform_external_protobuf" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/qemu" name="android_external_qemu" remote="cm" revision="cm-11.0" />
-  <project path="external/qemu-pc-bios" name="android_platform_external_qemu-pc-bios" remote="ill" revision="illusion-4.4" />
-  <project path="external/regex-re2" name="android_platform_external_regex-re2" remote="ill" revision="illusion-4.4" />
-  <project path="external/replicaisland" name="android_platform_external_replicaisland" remote="ill" revision="illusion-4.4" />
-  <project path="external/robolectric" name="android_platform_external_robolectric" remote="ill" revision="illusion-4.4" />
-  <project path="external/safe-iop" name="android_platform_external_safe-iop" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/scrypt" name="android_platform_external_scrypt" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/sepolicy" name="android_platform_external_sepolicy" />
-  <project path="external/sfntly" name="android_platform_external_sfntly" remote="ill" revision="illusion-4.4" />
-  <project path="external/sil-fonts" name="android_platform_external_sil-fonts" remote="ill" revision="illusion-4.4" />
-  <project path="external/skia" name="android_platform_external_skia" remote="ill" revision="illusion-4.4" />
-  <project path="external/smack" name="android_platform_external_smack" remote="ill" revision="illusion-4.4" />
-  <project path="external/smali" name="android_platform_external_smali" remote="ill" revision="illusion-4.4" />
-  <project path="external/sonivox" name="android_platform_external_sonivox" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/speex" name="android_platform_external_speex" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/sqlite" name="android_platform_external_sqlite" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/srec" name="android_platform_external_srec" remote="ill" revision="illusion-4.4" />
-  <project path="external/srtp" name="android_platform_external_srtp" remote="ill" revision="illusion-4.4" />
-  <project path="external/stlport" name="android_platform_external_stlport" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/strace" name="android_platform_external_strace" remote="ill" revision="illusion-4.4" />
-  <project path="external/stressapptest" name="android_platform_external_stressapptest" remote="ill" revision="illusion-4.4" />
-  <project path="external/svox" name="android_platform_external_svox" remote="ill" revision="illusion-4.4" />
-  <project path="external/tagsoup" name="android_platform_external_tagsoup" remote="ill" revision="illusion-4.4" />
-  <project path="external/tcpdump" name="android_platform_external_tcpdump" remote="ill" revision="illusion-4.4" />
-  <project path="external/timezonepicker-support" name="android_platform_external_timezonepicker-support" remote="ill" revision="illusion-4.4" />
-  <project path="external/tinyalsa" name="android_platform_external_tinyalsa" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/tinycompress" name="android_platform_external_tinycompress" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/tinyxml" name="android_platform_external_tinyxml" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/tinyxml2" name="android_platform_external_tinyxml2" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/tremolo" name="android_platform_external_tremolo" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/v8" name="android_platform_external_v8" remote="ill" revision="illusion-4.4" />
-  <project path="external/valgrind" name="android_platform_external_valgrind" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/webp" name="android_platform_external_webp" remote="ill" revision="illusion-4.4" />
-  <project path="external/webrtc" name="android_platform_external_webrtc" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/wpa_supplicant_8" name="android_platform_external_wpa_supplicant_8" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/xmlwriter" name="android_platform_external_xmlwriter" remote="ill" revision="illusion-4.4" />
-  <project path="external/xmp_toolkit" name="android_platform_external_xmp_toolkit" remote="ill" revision="illusion-4.4" />
-  <project path="external/yaffs2" name="android_platform_external_yaffs2" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/zlib" name="android_platform_external_zlib" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="external/zxing" name="android_platform_external_zxing" remote="ill" revision="illusion-4.4" />
-  <project path="frameworks/av" name="android_platform_frameworks_av" />
-  <project path="frameworks/base" name="android_platform_frameworks_base" />
-  <project path="frameworks/compile/libbcc" name="android_platform_frameworks_compile_libbcc" />
-  <project path="frameworks/compile/mclinker" name="android_platform_frameworks_compile_mclinker" />
-  <project path="frameworks/compile/slang" name="android_platform_frameworks_compile_slang" />
-  <project path="frameworks/ex" name="android_platform_frameworks_ex" />
-  <project path="frameworks/mff" name="android_platform_frameworks_mff" />
-  <project path="frameworks/ml" name="android_platform_frameworks_ml" />
-  <project path="frameworks/native" name="android_platform_frameworks_native" />
-  <project path="frameworks/opt/calendar" name="android_platform_frameworks_opt_calendar" />
-  <project path="frameworks/opt/carddav" name="android_platform_frameworks_opt_carddav" />
-  <project path="frameworks/opt/colorpicker" name="android_platform_frameworks_opt_colorpicker" />
-  <project path="frameworks/opt/datetimepicker" name="android_platform_frameworks_opt_datetimepicker" />
-  <project path="frameworks/opt/emoji" name="android_platform_frameworks_opt_emoji" />
-  <project path="frameworks/opt/inputmethodcommon" name="android_platform_frameworks_opt_inputmethodcommon" />
-  <project path="frameworks/opt/mailcommon" name="android_platform_frameworks_opt_mailcommon" />
-  <project path="frameworks/opt/mms" name="android_platform_frameworks_opt_mms" />
-  <project path="frameworks/opt/net/voip" name="android_platform_frameworks_opt_net_voip" />
-  <project path="frameworks/opt/photoviewer" name="android_platform_frameworks_opt_photoviewer" />
-  <project path="frameworks/opt/timezonepicker" name="android_platform_frameworks_opt_timezonepicker" />
-  <project path="frameworks/opt/telephony" name="android_platform_frameworks_opt_telephony" groups="pdk" />
-  <project path="frameworks/opt/vcard" name="android_platform_frameworks_opt_vcard" />
-  <project path="frameworks/rs" name="android_platform_frameworks_rs" groups="pdk" />
-  <project path="frameworks/support" name="android_platform_frameworks_support" />
-  <project path="frameworks/testing" name="android_platform_frameworks_testing" />
-  <project path="frameworks/uiautomator" name="android_platform_frameworks_uiautomator" />
-  <project path="frameworks/volley" name="android_platform_frameworks_volley" />
-  <project path="frameworks/webview" name="android_platform_frameworks_webview" />
-  <project path="frameworks/wilhelm" name="android_platform_frameworks_wilhelm" />
-  <project path="hardware/akm" remote="ill" revision="illusion-4.4" name="android_platform_hardware_akm" />
-  <project path="hardware/broadcom/libbt" remote="ill" revision="illusion-4.4" name="android_platform_hardware_broadcom_libbt" groups="pdk" />
-  <project path="hardware/broadcom/wlan" remote="ill" revision="illusion-4.4" name="android_platform_hardware_broadcom_wlan" groups="broadcom_wlan" />
-  <project path="hardware/invensense" remote="ill" revision="illusion-4.4" name="android_platform_hardware_invensense" groups="invensense" />
-  <project path="hardware/libhardware" remote="ill" revision="illusion-4.4" name="android_platform_hardware_libhardware" groups="pdk" />
-  <project path="hardware/libhardware_legacy" remote="ill" revision="illusion-4.4" name="android_platform_hardware_libhardware_legacy" groups="pdk" />
-  <project path="hardware/qcom/audio" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_audio" groups="qcom" />
-  <project path="hardware/qcom/bt" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_bt" groups="qcom" />
-  <project path="hardware/qcom/camera" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_camera" groups="qcom" />
-  <project path="hardware/qcom/display" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_display" groups="qcom" />
-  <project path="hardware/qcom/gps" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_gps" groups="qcom" />
-  <project path="hardware/qcom/keymaster" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_keymaster" groups="qcom" />
-  <project path="hardware/qcom/media" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_media" groups="qcom" />
-  <project path="hardware/qcom/msm8960" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_msm8960" groups="qcom_msm8960" />
-  <project path="hardware/qcom/msm8x74" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_msm8x74" groups="qcom_msm8x74" />
-  <project path="hardware/qcom/power" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_power" groups="qcom" />
-  <project path="hardware/qcom/sensors" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_sensors" groups="qcom" />
-  <project path="hardware/qcom/wlan" remote="ill" revision="illusion-4.4" name="android_platform_hardware_qcom_wlan" groups="qcom_wlan" />
-  <project path="hardware/samsung_slsi/exynos5" remote="ill" revision="illusion-4.4" name="android_platform_hardware_samsung_slsi_exynos5" groups="exynos5" />
-  <project path="hardware/samsung" remote="ill" revision="illusion-4.4" name="android_platform_hardware_samsung" />
-  <project path="hardware/ti/omap3" remote="ill" revision="illusion-4.4" name="android_platform_hardware_ti_omap3" />
-  <project path="hardware/ti/omap4xxx" remote="ill" revision="illusion-4.4" name="android_platform_hardware_ti_omap4xxx" groups="omap4" />
-  <project path="hardware/ti/wlan" remote="ill" revision="illusion-4.4" name="android_platform_hardware_ti_wlan" />
-  <project path="hardware/ti/wpan" remote="ill" revision="illusion-4.4" name="android_platform_hardware_ti_wpan" />
-  <project path="libcore" name="android_platform_libcore" />
-  <project path="libnativehelper" name="android_platform_libnativehelper" groups="pdk-java" />
-  <project path="ndk" name="android_platform_ndk" />
-  <project path="packages/apps/BasicSmsReceiver" name="android_platform_packages_apps_BasicSmsReceiver" />
-  <project path="packages/apps/Bluetooth" name="android_platform_packages_apps_Bluetooth" />
-  <project path="packages/apps/BluetoothExt" name="android_platform_packages_apps_BluetoothExt" />
-  <project path="packages/apps/Browser" name="android_platform_packages_apps_Browser" />
-  <project path="packages/apps/Calculator" name="android_platform_packages_apps_Calculator" />
-  <project path="packages/apps/Calendar" name="android_platform_packages_apps_Calendar" />
-  <project path="packages/apps/Camera" name="android_platform_packages_apps_Camera" />
-  <project path="packages/apps/Camera2" name="android_platform_packages_apps_Camera2" />
-  <project path="packages/apps/CellBroadcastReceiver" name="android_platform_packages_apps_CellBroadcastReceiver" />
-  <project path="packages/apps/CertInstaller" name="android_platform_packages_apps_CertInstaller" />
-  <project path="packages/apps/Contacts" name="android_platform_packages_apps_Contacts" />
-  <project path="packages/apps/ContactsCommon" name="android_platform_packages_apps_ContactsCommon" />
-  <project path="packages/apps/DeskClock" name="android_platform_packages_apps_DeskClock" />
-  <project path="packages/apps/Dialer" name="android_platform_packages_apps_Dialer" />
-  <project path="packages/apps/Email" name="android_platform_packages_apps_Email" />
-  <project path="packages/apps/Exchange" name="android_platform_packages_apps_Exchange" />
-  <project path="packages/apps/Gallery" name="android_platform_packages_apps_Gallery" />
-  <project path="packages/apps/Gallery2" name="android_platform_packages_apps_Gallery2" />
-  <project path="packages/apps/HTMLViewer" name="android_platform_packages_apps_HTMLViewer" />
-  <project path="packages/apps/InCallUI" name="android_platform_packages_apps_InCallUI" />
-  <project path="packages/apps/KeyChain" name="android_platform_packages_apps_KeyChain" />
-  <project path="packages/apps/Launcher2" name="android_platform_packages_apps_Launcher2" />
-  <project path="packages/apps/Launcher3" name="android_platform_packages_apps_Launcher3" />
-  <project path="packages/apps/LegacyCamera" name="android_platform_packages_apps_LegacyCamera" />
-  <project path="packages/apps/Mms" name="android_platform_packages_apps_Mms" />
-  <project path="packages/apps/Music" name="android_platform_packages_apps_Music" />
-  <project path="packages/apps/MusicFX" name="android_platform_packages_apps_MusicFX" />
-  <project path="packages/apps/Nfc" name="android_platform_packages_apps_Nfc" />
-  <project path="packages/apps/OneTimeInitializer" name="android_platform_packages_apps_OneTimeInitializer" />
-  <project path="packages/apps/PackageInstaller" name="android_platform_packages_apps_PackageInstaller" />
-  <project path="packages/apps/Phone" name="android_platform_packages_apps_Phone" />
-  <project path="packages/apps/PhoneCommon" name="android_platform_packages_apps_PhoneCommon" />
-  <project path="packages/apps/Protips" name="android_platform_packages_apps_Protips" />
-  <project path="packages/apps/Provision" name="android_platform_packages_apps_Provision" />
-  <project path="packages/apps/QuickSearchBox" name="android_platform_packages_apps_QuickSearchBox" />
-  <project path="packages/apps/Settings" name="android_platform_packages_apps_Settings" />
-  <project path="packages/apps/SmartCardService" name="android_platform_packages_apps_SmartCardService" />
-  <project path="packages/apps/SoundRecorder" name="android_platform_packages_apps_SoundRecorder" />
-  <project path="packages/apps/SpareParts" name="android_platform_packages_apps_SpareParts" />
-  <project path="packages/apps/SpeechRecorder" name="android_platform_packages_apps_SpeechRecorder" />
-  <project path="packages/apps/Stk" name="android_platform_packages_apps_Stk" />
-  <project path="packages/apps/Tag" name="android_platform_packages_apps_Tag" />
-  <project path="packages/apps/UnifiedEmail" name="android_platform_packages_apps_UnifiedEmail" />
-  <project path="packages/apps/VideoEditor" name="android_platform_packages_apps_VideoEditor" />
-  <project path="packages/apps/VoiceDialer" name="android_platform_packages_apps_VoiceDialer" />
-  <project path="packages/experimental" name="android_platform_packages_experimental" />
-  <project path="packages/inputmethods/LatinIME" name="android_platform_packages_inputmethods_LatinIME" />
-  <project path="packages/inputmethods/OpenWnn" name="android_platform_packages_inputmethods_OpenWnn" />
-  <project path="packages/inputmethods/PinyinIME" name="android_platform_packages_inputmethods_PinyinIME" />
-  <project path="packages/providers/ApplicationsProvider" name="android_platform_packages_providers_ApplicationsProvider" />
-  <project path="packages/providers/CalendarProvider" name="android_platform_packages_providers_CalendarProvider" />
-  <project path="packages/providers/ContactsProvider" name="android_platform_packages_providers_ContactsProvider" />
-  <project path="packages/providers/DownloadProvider" name="android_platform_packages_providers_DownloadProvider" />
-  <project path="packages/providers/MediaProvider" name="android_platform_packages_providers_MediaProvider" />
-  <project path="packages/providers/PartnerBookmarksProvider" name="android_platform_packages_providers_PartnerBookmarksProvider" />
-  <project path="packages/providers/TelephonyProvider" name="android_platform_packages_providers_TelephonyProvider" />
-  <project path="packages/providers/UserDictionaryProvider" name="android_platform_packages_providers_UserDictionaryProvider" />
-  <project path="packages/screensavers/Basic" name="android_platform_packages_screensavers_Basic" />
-  <project path="packages/screensavers/PhotoTable" name="android_platform_packages_screensavers_PhotoTable" />
-  <project path="packages/screensavers/WebView" name="android_platform_packages_screensavers_WebView" />
-  <project path="packages/services/Telephony" name="android_platform_packages_services_Telephony" />
-  <project path="packages/wallpapers/Basic" name="android_platform_packages_wallpapers_Basic" />
-  <project path="packages/wallpapers/Galaxy4" name="android_platform_packages_wallpapers_Galaxy4" />
-  <project path="packages/wallpapers/HoloSpiral" name="android_platform_packages_wallpapers_HoloSpiral" />
-  <project path="packages/wallpapers/LivePicker" name="android_platform_packages_wallpapers_LivePicker" />
-  <project path="packages/wallpapers/MagicSmoke" name="android_platform_packages_wallpapers_MagicSmoke" />
-  <project path="packages/wallpapers/MusicVisualization" name="android_platform_packages_wallpapers_MusicVisualization" />
-  <project path="packages/wallpapers/NoiseField" name="android_platform_packages_wallpapers_NoiseField" />
-  <project path="packages/wallpapers/PhaseBeam" name="android_platform_packages_wallpapers_PhaseBeam" />
-  <project path="pdk" name="android_platform_pdk" groups="pdk" />
-  <project path="prebuilts/clang/darwin-x86/3.1" name="android_platform_prebuilts_clang_darwin-x86_3.1" groups="pdk,darwin" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/clang/darwin-x86/3.2" name="android_platform_prebuilts_clang_darwin-x86_3.2" groups="pdk,darwin" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/clang/darwin-x86/arm/3.3" name="android_platform_prebuilts_clang_darwin-x86_arm_3.3" groups="darwin,arm" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/clang/darwin-x86/host/3.3" name="android_platform_prebuilts_clang_darwin-x86_host_3.3" groups="darwin" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/clang/darwin-x86/mips/3.3" name="android_platform_prebuilts_clang_darwin-x86_mips_3.3" groups="darwin,mips" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/clang/darwin-x86/x86/3.3" name="android_platform_prebuilts_clang_darwin-x86_x86_3.3" groups="darwin,x86" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/clang/linux-x86/3.1" name="android_platform_prebuilts_clang_linux-x86_3.1" groups="pdk,linux" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/clang/linux-x86/3.2" name="android_platform_prebuilts_clang_linux-x86_3.2" groups="pdk,linux" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/clang/linux-x86/arm/3.3" name="android_platform_prebuilts_clang_linux-x86_arm_3.3" groups="linux,arm" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/clang/linux-x86/host/3.3" name="android_platform_prebuilts_clang_linux-x86_host_3.3" groups="linux" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/clang/linux-x86/mips/3.3" name="android_platform_prebuilts_clang_linux-x86_mips_3.3" groups="linux,mips" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/clang/linux-x86/x86/3.3" name="android_platform_prebuilts_clang_linux-x86_x86_3.3" groups="linux,x86" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/devtools" name="android_platform_prebuilts_devtools" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/eclipse" name="android_platform_prebuilts_eclipse" groups="pdk" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/eclipse-build-deps" name="android_platform_prebuilts_eclipse-build-deps" groups="notdefault,eclipse" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/eclipse-build-deps-sources" name="android_platform_prebuilts_eclipse-build-deps-sources" groups="notdefault,eclipse" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.6" name="android_platform_prebuilts_gcc_darwin-x86_arm_arm-eabi-4.6" groups="pdk,darwin,arm" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.7" name="android_platform_prebuilts_gcc_darwin-x86_arm_arm-eabi-4.7" groups="pdk,darwin,arm" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.6" name="android_platform_prebuilts_gcc_darwin-x86_arm_arm-linux-androideabi-4.6" groups="pdk,darwin,arm" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.7" name="android_platform_prebuilts_gcc_darwin-x86_arm_arm-linux-androideabi-4.7" groups="pdk,darwin,arm" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/darwin-x86/host/headers" name="android_platform_prebuilts_gcc_darwin-x86_host_headers" groups="pdk,darwin" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" name="android_platform_prebuilts_gcc_darwin-x86_host_i686-apple-darwin-4.2.1" groups="pdk,darwin" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/darwin-x86/mips/mipsel-linux-android-4.6" name="android_platform_prebuilts_gcc_darwin-x86_mips_mipsel-linux-android-4.6" groups="pdk,darwin,mips" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/darwin-x86/mips/mipsel-linux-android-4.7" name="android_platform_prebuilts_gcc_darwin-x86_mips_mipsel-linux-android-4.7" groups="pdk,darwin,mips" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.6" name="android_platform_prebuilts_gcc_darwin-x86_x86_i686-linux-android-4.6" groups="pdk,darwin,x86" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.7" name="android_platform_prebuilts_gcc_darwin-x86_x86_i686-linux-android-4.7" groups="pdk,darwin,x86" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.7" name="android_platform_prebuilts_gcc_darwin-x86_x86_x86_64-linux-android-4.7" groups="pdk,darwin,x86" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.6" name="android_platform_prebuilts_gcc_linux-x86_arm_arm-eabi-4.6" groups="pdk,linux,arm" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" name="android_platform_prebuilts_gcc_linux-x86_arm_arm-eabi-4.7" groups="pdk,linux,arm" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6" name="android_platform_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.6" groups="pdk,linux,arm" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" name="android_platform_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.7" groups="pdk,linux,arm" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.4.3" name="android_platform_prebuilts_gcc_linux-x86_host_i686-linux-glibc2.7-4.4.3" groups="pdk,linux" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6" name="android_platform_prebuilts_gcc_linux-x86_host_i686-linux-glibc2.7-4.6" groups="pdk,linux" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6" name="android_platform_prebuilts_gcc_linux-x86_host_x86_64-linux-glibc2.7-4.6" groups="pdk,linux" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/linux-x86/mips/mipsel-linux-android-4.6" name="android_platform_prebuilts_gcc_linux-x86_mips_mipsel-linux-android-4.6" groups="pdk,linux,mips" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/linux-x86/mips/mipsel-linux-android-4.7" name="android_platform_prebuilts_gcc_linux-x86_mips_mipsel-linux-android-4.7" groups="pdk,linux,mips" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/linux-x86/x86/i686-linux-android-4.6" name="android_platform_prebuilts_gcc_linux-x86_x86_i686-linux-android-4.6" groups="pdk,linux,x86" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/linux-x86/x86/i686-linux-android-4.7" name="android_platform_prebuilts_gcc_linux-x86_x86_i686-linux-android-4.7" groups="pdk,linux,x86" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.7" name="android_platform_prebuilts_gcc_linux-x86_x86_x86_64-linux-android-4.7" groups="pdk,linux,x86" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/misc" name="android_platform_prebuilts_misc" groups="pdk" />
-  <project path="prebuilts/ndk" name="android_platform_prebuilts_ndk" groups="pdk" />
-  <project path="prebuilts/python/darwin-x86/2.7.5" name="android_platform_prebuilts_python_darwin-x86_2.7.5" groups="darwin" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/python/linux-x86/2.7.5" name="android_platform_prebuilts_python_linux-x86_2.7.5" groups="linux" remote="ill" revision="illusion-4.4" />
-  <project path="prebuilts/qemu-kernel" name="android_platform_prebuilts_qemu-kernel" groups="pdk"  remote="ill" revision="illusion-4.4"  />
-  <project path="prebuilts/runtime" name="android_platform_prebuilts_runtime" />
-  <project path="prebuilts/sdk" name="android_platform_prebuilts_sdk" groups="pdk" />
-  <project path="prebuilts/tools" name="android_platform_prebuilts_tools" />
-  <project path="sdk" name="android_platform_sdk" />
-  <project path="system/core" name="android_platform_system_core" groups="pdk" />
-  <project path="system/media" name="android_platform_system_media" groups="pdk" />
-  <project path="system/netd" name="android_platform_system_netd" groups="pdk" />
-  <project path="system/security" name="android_platform_system_security" groups="pdk" />
-  <project path="tools/adt/eclipse" name="IllusionRom/android_platform_tools_adt_eclipse" groups="notdefault,tools" remote="ill" revision="illusion-4.4" />
-  <project path="tools/adt/idea" name="IllusionRom/android_platform_tools_adt_idea" groups="notdefault,tools" remote="ill" revision="illusion-4.4" />
-  <project path="tools/base" name="IllusionRom/android_platform_tools_base" groups="notdefault,tools" remote="ill"  revision="illusion-4.4"  />
-  <project path="tools/build" name="IllusionRom/android_platform_tools_build" groups="notdefault,tools" remote="ill"  revision="illusion-4.4"  />
-  <project path="tools/emulator" name="IllusionRom/android_platform_tools_emulator" groups="notdefault,tools" remote="ill"  revision="illusion-4.4"  />
-  <project path="tools/external/fat32lib" name="android_platform_tools_external_fat32lib" groups="tools" />
-  <project path="tools/external/gradle" name="android_platform_tools_external_gradle" groups="tools" />
-  <project path="tools/idea" name="IllusionRom/android_platform_tools_idea" groups="notdefault,tools" remote="ill"  revision="illusion-4.4"  />
-  <project path="tools/motodev" name="IllusionRom/android_platform_tools_motodev" groups="notdefault,motodev" remote="ill"  revision="illusion-4.4"  />
-  <project path="tools/studio/cloud" name="IllusionRom/android_platform_tools_studio_cloud" groups="notdefault,tools" remote="ill"  revision="illusion-4.4"  />
-  <project path="tools/swt" name="IllusionRom/android_platform_tools_swt" groups="notdefault,tools" remote="ill"  revision="illusion-4.4"  />
+  <project path="art" name="AOKP/art" remote="aokp" revision="kitkat" />
+  <project path="abi/cpp" name="platform/abi/cpp" groups="pdk"/>
+  <project path="bionic" name="AOKP/bionic" remote="aokp" revision="kitkat" groups="pdk" />
+  <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" />
+  <project path="bootable/diskinstaller" name="platform/bootable/diskinstaller" />
+  <project path="bootable/recovery" name="CyanogenMod/android_bootable_recovery" remote="cm" revision="cm-11.0" />
+  <project path="cts" name="platform/cts" groups="cts"/>
+  <project path="dalvik" name="AOKP/dalvik" remote="aokp" revision="kitkat" />
+  <project path="developers/build" name="platform/developers/build" />
+  <project path="developers/demos" name="platform/developers/demos" />
+  <project path="developers/docs" name="platform/developers/docs" />
+  <project path="developers/samples/android" name="platform/developers/samples/android" />
+  <project path="development" name="platform/development" />
+  <project path="device/asus/grouper" name="android_device_asus_grouper" remote="plain" revision="kk"/>
+  <project path="device/common" name="device/common" groups="device" />
+  <project path="device/generic/armv7-a-neon" name="device/generic/armv7-a-neon" groups="pdk" />
+  <project path="device/generic/common" name="device/generic/common"  groups="pdk" />
+  <project path="device/generic/goldfish" name="device/generic/goldfish" groups="pdk" />
+  <project path="device/generic/mips" name="device/generic/mips" groups="pdk,notdefault" />
+  <project path="device/generic/x86" name="device/generic/x86" groups="pdk,notdefault" />
+  <project path="device/generic/mini-emulator-armv7-a-neon" name="device/generic/mini-emulator-armv7-a-neon" groups="pdk" />
+  <project path="device/generic/mini-emulator-mips" name="device/generic/mini-emulator-mips" groups="pdk,notdefault" />
+  <project path="device/generic/mini-emulator-x86" name="device/generic/mini-emulator-x86" groups="pdk,notdefault" />
+  <project path="device/google/accessory/arduino" name="device/google/accessory/arduino" groups="notdefault,device" />
+  <project path="device/google/accessory/demokit" name="device/google/accessory/demokit" groups="notdefault,device" />
+  <project path="device/htc/vigor" name="device_htc_vigor" remote="plain" revision="kk" />
+  <project path="device/htc/msm8660-common" name="android_device_htc_msm8660-common" remote="plain" revision="kk" />
+  <project path="device/lge/g2-common" name="android_device_lge_g2-common" remote="plain" revision="kk_2" />
+  <project path="device/lge/vs980" name="android_device_lge_vs980" remote="plain" revision="kk" />
+  <project path="device/lge/d800" name="android_device_lge_d800" remote="plain" revision="kk" />
+  <project path="docs/source.android.com" name="platform/docs/source.android.com" />
+  <project path="external/aac" name="CyanogenMod/android_external_aac" remote="cm" revision="cm-11.0" />
+  <project path="external/android-clat" name="platform/external/android-clat" />
+  <project path="external/android-mock" name="CyanogenMod/android_external_android-mock" remote="cm" revision="cm-11.0" />
+  <project path="external/ant-glob" name="platform/external/ant-glob" />
+  <project path="external/ant-wireless/ant_native" name="CyanogenMod/android_external_ant-wireless_ant_native" remote="cm" revision="cm-11.0" />
+  <project path="external/ant-wireless/ant_service" name="CyanogenMod/android_external_ant-wireless_ant_service" remote="cm" revision="cm-11.0" />
+  <project path="external/ant-wireless/antradio-library" name="CyanogenMod/android_external_ant-wireless_antradio-library" remote="cm" revision="cm-11.0" />
+  <project path="external/antlr" name="platform/external/antlr" />
+  <project path="external/apache-harmony" name="platform/external/apache-harmony" />
+  <project path="external/apache-http" name="platform/external/apache-http" />
+  <project path="external/apache-qp" name="platform/external/apache-qp" />
+  <project path="external/apache-xml" name="platform/external/apache-xml" />
+  <project path="external/arduino" name="platform/external/arduino" />
+  <project path="external/bison" name="platform/external/bison" groups="pdk" />
+  <project path="external/blktrace" name="platform/external/blktrace" />
+  <project path="external/bluetooth/bluedroid" name="CyanogenMod/android_external_bluetooth_bluedroid" remote="cm" revision="cm-11.0" groups="pdk" />
+  <project path="external/bouncycastle" name="platform/external/bouncycastle" />
+  <project path="external/bsdiff" name="platform/external/bsdiff" groups="pdk" />
+  <project path="external/busybox" name="AOKP/external_busybox" remote="aokp" revision="kitkat" />
+  <project path="external/bzip2" name="platform/external/bzip2" groups="pdk" />
+  <project path="external/ceres-solver" name="platform/external/ceres-solver" />
+  <project path="external/checkpolicy" name="platform/external/checkpolicy" groups="pdk" />
+  <project path="external/chromium" name="platform/external/chromium" />
+  <project path="external/chromium-libpac" name="platform/external/chromium-libpac" />
+  <project path="external/chromium-trace" name="platform/external/chromium-trace" groups="pdk"/>
+  <project path="external/chromium_org" name="CyanogenMod/android_external_chromium_org" remote="cm" revision="cm-11.0" />
+  <project path="external/chromium_org/sdch/open-vcdiff" name="platform/external/chromium_org/sdch/open-vcdiff" />
+  <project path="external/chromium_org/testing/gtest" name="platform/external/chromium_org/testing/gtest" />
+  <project path="external/chromium_org/third_party/WebKit" name="platform/external/chromium_org/third_party/WebKit" />
+  <project path="external/chromium_org/third_party/angle" name="platform/external/chromium_org/third_party/angle" />
+  <project path="external/chromium_org/third_party/eyesfree/src/android/java/src/com/googlecode/eyesfree/braille" name="platform/external/chromium_org/third_party/eyesfree/src/android/java/src/com/googlecode/eyesfree/braille" />
+  <project path="external/chromium_org/third_party/freetype" name="platform/external/chromium_org/third_party/freetype" />
+  <project path="external/chromium_org/third_party/icu" name="platform/external/chromium_org/third_party/icu" />
+  <project path="external/chromium_org/third_party/leveldatabase/src" name="platform/external/chromium_org/third_party/leveldatabase/src" />
+  <project path="external/chromium_org/third_party/libjingle/source/talk" name="platform/external/chromium_org/third_party/libjingle/source/talk" />
+  <project path="external/chromium_org/third_party/libphonenumber/src/phonenumbers" name="platform/external/chromium_org/third_party/libphonenumber/src/phonenumbers" />
+  <project path="external/chromium_org/third_party/libphonenumber/src/resources" name="platform/external/chromium_org/third_party/libphonenumber/src/resources" />
+  <project path="external/chromium_org/third_party/mesa/src" name="platform/external/chromium_org/third_party/mesa/src" />
+  <project path="external/chromium_org/third_party/openssl" name="CyanogenMod/android_external_chromium_org_third_party_openssl" remote="cm" revision="cm-11.0" />
+  <project path="external/chromium_org/third_party/opus/src" name="platform/external/chromium_org/third_party/opus/src" />
+  <project path="external/chromium_org/third_party/ots" name="platform/external/chromium_org/third_party/ots" />
+  <project path="external/chromium_org/third_party/sfntly/cpp/src" name="platform/external/chromium_org/third_party/sfntly/cpp/src" />
+  <project path="external/chromium_org/third_party/skia/gyp" name="platform/external/chromium_org/third_party/skia/gyp" />
+  <project path="external/chromium_org/third_party/skia/include" name="platform/external/chromium_org/third_party/skia/include" />
+  <project path="external/chromium_org/third_party/skia/src" name="platform/external/chromium_org/third_party/skia/src" />
+  <project path="external/chromium_org/third_party/smhasher/src" name="platform/external/chromium_org/third_party/smhasher/src" />
+  <project path="external/chromium_org/third_party/yasm/source/patched-yasm" name="platform/external/chromium_org/third_party/yasm/source/patched-yasm" />
+  <project path="external/chromium_org/tools/grit" name="platform/external/chromium_org/tools/grit" />
+  <project path="external/chromium_org/tools/gyp" name="platform/external/chromium_org/tools/gyp" />
+  <project path="external/chromium_org/v8" name="platform/external/chromium_org/v8" />
+  <project path="external/clang" name="AOKP/external_clang" remote="aokp" revision="kitkat" groups="pdk" />
+  <project path="external/compiler-rt" name="platform/external/compiler-rt" groups="pdk" />
+  <project path="external/dexmaker" name="platform/external/dexmaker" />
+  <project path="external/dhcpcd" name="platform/external/dhcpcd" />
+  <project path="external/dnsmasq" name="AOKP/external_dnsmasq" remote="aokp" revision="kitkat" groups="pdk"/>
+  <project path="external/doclava" name="platform/external/doclava" />
+  <project path="external/dropbear" name="platform/external/dropbear" />
+  <project path="external/droiddriver" name="platform/external/droiddriver" />
+  <project path="external/e2fsprogs" name="AOKP/external_e2fsprogs" remote="aokp" revision="kitkat" groups="pdk" />
+  <project path="external/easymock" name="platform/external/easymock" />
+  <project path="external/eclipse-basebuilder" name="platform/external/eclipse-basebuilder" />
+  <project path="external/eclipse-windowbuilder" name="platform/external/eclipse-windowbuilder" />
+  <project path="external/eigen" name="platform/external/eigen" />
+  <project path="external/elfutils" name="CyanogenMod/android_external_elfutils" remote="cm" revision="cm-11.0" />
+  <project path="external/embunit" name="platform/external/embunit" />
+  <project path="external/emma" name="platform/external/emma" />
+  <project path="external/esd" name="platform/external/esd" />
+  <project path="external/exfat" name="AOKP/external_exfat" remote="aokp" revision="kitkat" />
+  <project path="external/expat" name="platform/external/expat" groups="pdk" />
+  <project path="external/eyes-free" name="platform/external/eyes-free" />
+  <project path="external/f2fs-tools" name="AOKP/external_f2fs-tools" remote="aokp" revision="kitkat" />
+  <project path="external/fdlibm" name="platform/external/fdlibm" />
+  <project path="external/ffmpeg" name="CyanogenMod/android_external_ffmpeg" remote="cm" revision="cm-11.0" groups="pdk" />
+  <project path="external/flac" name="CyanogenMod/android_external_flac" remote="cm" revision="cm-11.0" groups="pdk" />
+  <project path="external/freetype" name="platform/external/freetype" groups="pdk" />
+  <project path="external/fsck_msdos" name="AOKP/external_fsck_msdos" remote="aokp" revision="kitkat" />
+  <project path="external/fuse" name="AOKP/external_fuse" remote="aokp" revision="kitkat" />
+  <project path="external/ganymed-ssh2" name="platform/external/ganymed-ssh2" />
+  <project path="external/gcc-demangle" name="platform/external/gcc-demangle" groups="pdk" />
+  <project path="external/genext2fs" name="platform/external/genext2fs" />
+  <project path="external/giflib" name="platform/external/giflib" />
+  <project path="external/google-diff-match-patch" name="platform/external/google-diff-match-patch" />
+  <project path="external/grub" name="platform/external/grub" />
+  <project path="external/gtest" name="platform/external/gtest" groups="pdk" />
+  <project path="external/guava" name="platform/external/guava" />
+  <project path="external/hamcrest" name="platform/external/hamcrest" />
+  <project path="external/harfbuzz" name="platform/external/harfbuzz" />
+  <project path="external/harfbuzz_ng" name="platform/external/harfbuzz_ng" />
+  <project path="external/hyphenation" name="platform/external/hyphenation" />
+  <project path="external/icu4c" name="CyanogenMod/android_external_icu4c" remote="cm" revision="cm-11.0" groups="pdk" />
+  <project path="external/iproute2" name="CyanogenMod/android_external_iproute2" remote="cm" revision="cm-11.0" groups="pdk" />
+  <project path="external/ipsec-tools" name="platform/external/ipsec-tools" />
+  <project path="external/iptables" name="platform/external/iptables" />
+  <project path="external/iputils" name="platform/external/iputils" />
+  <project path="external/jack" name="platform/external/jack" />
+  <project path="external/javasqlite" name="CyanogenMod/android_external_javasqlite" remote="cm" revision="cm-11.0" />
+  <project path="external/javassist" name="platform/external/javassist" />
+  <project path="external/jbirdvegas/mGerrit" name="AOKP/external_jbirdvegas_mGerrit" remote="aokp" revision="master" />
+  <project path="external/jdiff" name="platform/external/jdiff" />
+  <project path="external/jhead" name="platform/external/jhead" groups="pdk" />
+  <project path="external/jmdns" name="platform/external/jmdns" />
+  <project path="external/jmonkeyengine" name="platform/external/jmonkeyengine" />
+  <project path="external/jpeg" name="AOKP/external_jpeg" remote="aokp" revision="kitkat" />
+  <project path="external/jsilver" name="platform/external/jsilver" />
+  <project path="external/jsr305" name="platform/external/jsr305" />
+  <project path="external/junit" name="platform/external/junit" />
+  <project path="external/kernel-headers" name="platform/external/kernel-headers" />
+  <project path="external/kissfft" name="AOKP/external_kissfft" remote="aokp" revision="kitkat" />
+  <project path="external/koush/Superuser" name="CyanogenMod/Superuser" remote="cm" revision="cm-11.0" />
+  <project path="external/koush/Widgets" name="CyanogenMod/Widgets" remote="cm" revision="cm-11.0" />
+  <project path="external/libcap-ng" name="platform/external/libcap-ng" />
+  <project path="external/libexif" name="platform/external/libexif" />
+  <project path="external/libffi" name="platform/external/libffi" />
+  <project path="external/libgsm" name="platform/external/libgsm" groups="pdk" />
+  <project path="external/liblzf" name="platform/external/liblzf" groups="pdk" />
+  <project path="external/libmtp" name="platform/external/libmtp" />
+  <project path="external/libnfc-nci" name="CyanogenMod/android_external_libnfc-nci" remote="cm" revision="cm-11.0" groups="pdk"/>
+  <project path="external/libnfc-nxp" name="CyanogenMod/android_external_libnfc-nxp" remote="cm" revision="cm-11.0" groups="pdk" />
+  <project path="external/libnl-headers" name="platform/external/libnl-headers" groups="pdk" />
+  <project path="external/libogg" name="platform/external/libogg" />
+  <project path="external/libpcap" name="platform/external/libpcap" />
+  <project path="external/libphonenumber" name="platform/external/libphonenumber" />
+  <project path="external/libpng" name="CyanogenMod/android_external_libpng" remote="cm" revision="cm-11.0" groups="pdk" />
+  <project path="external/libppp" name="platform/external/libppp" />
+  <project path="external/libselinux" name="AOKP/external_libselinux" remote="aokp" revision="kitkat" groups="pdk" />
+  <project path="external/libsepol" name="AOKP/external_libsepol" remote="aokp" revision="kitkat" />
+  <project path="external/libtar" name="CyanogenMod/android_external_libtar" remote="cm" revision="cm-11.0" />
+  <project path="external/libssh2" name="platform/external/libssh2" />
+  <project path="external/libusb" name="CyanogenMod/android_external_libusb" remote="cm" revision="cm-11.0" />
+  <project path="external/libusb-compat" name="platform/external/libusb-compat" />
+  <project path="external/libvorbis" name="platform/external/libvorbis" />
+  <project path="external/libvpx" name="platform/external/libvpx" groups="pdk" />
+  <project path="external/libxml2" name="CyanogenMod/android_external_libxml2" remote="cm" revision="cm-11.0" />
+  <project path="external/libxslt" name="platform/external/libxslt" />
+  <project path="external/libyuv" name="platform/external/libyuv" groups="libyuv" />
+  <project path="external/linux-tools-perf" name="CyanogenMod/android_external_linux-tools-perf" remote="cm" revision="cm-11.0" />
+  <project path="external/littlemock" name="platform/external/littlemock" />
+  <project path="external/llvm" name="CyanogenMod/android_external_llvm" remote="cm" revision="cm-11.0" groups="pdk" />
+  <project path="external/lzma" name="platform/external/lzma" />
+  <project path="external/marisa-trie" name="platform/external/marisa-trie" />
+  <project path="external/markdown" name="platform/external/markdown" />
+  <project path="external/mdnsresponder" name="platform/external/mdnsresponder" groups="pdk" />
+  <project path="external/mesa3d" name="platform/external/mesa3d" />
+  <project path="external/mksh" name="AOKP/external_mksh" remote="aokp" revision="kitkat" groups="pdk" />
+  <project path="external/mockito" name="platform/external/mockito" />
+  <project path="external/mockwebserver" name="platform/external/mockwebserver" />
+  <project path="external/mp4parser" name="platform/external/mp4parser" />
+  <project path="external/mtpd" name="platform/external/mtpd" />
+  <project path="external/naver-fonts" name="platform/external/naver-fonts" />
+  <project path="external/netcat" name="platform/external/netcat" />
+  <project path="external/netperf" name="platform/external/netperf" />
+  <project path="external/neven" name="platform/external/neven" />
+  <project path="external/nist-pkits" name="platform/external/nist-pkits" />
+  <project path="external/nist-sip" name="CyanogenMod/android_external_nist-sip" remote="cm" revision="cm-11.0" />
+  <project path="external/noto-fonts" name="platform/external/noto-fonts" />
+  <project path="external/ntfs-3g" name="AOKP/external_ntfs-3g" remote="aokp" revision="kitkat" />
+  <project path="external/oauth" name="platform/external/oauth" />
+  <project path="external/objenesis" name="platform/external/objenesis" />
+  <project path="external/okhttp" name="platform/external/okhttp" />
+  <project path="external/open-vcdiff" name="platform/external/open-vcdiff" />
+  <project path="external/opencv" name="platform/external/opencv" />
+  <project path="external/openfst" name="platform/external/openfst" />
+  <project path="external/openssh" name="AOKP/external_openssh" remote="aokp" revision="kitkat" />
+  <project path="external/openssl" name="CyanogenMod/android_external_openssl" remote="cm" revision="cm-11.0" groups="pdk" />
+  <project path="external/oprofile" name="platform/external/oprofile" />
+  <project path="external/pigz" name="AOKP/external_pigz" remote="aokp" revision="kitkat" />
+  <project path="external/pixman" name="platform/external/pixman" />
+  <project path="external/ppp" name="platform/external/ppp" />
+  <project path="external/proguard" name="platform/external/proguard" groups="pdk-java" />
+  <project path="external/protobuf" name="platform/external/protobuf" groups="pdk" />
+  <project path="external/qemu" name="CyanogenMod/android_external_qemu" remote="cm" revision="cm-11.0" />
+  <project path="external/qemu-pc-bios" name="platform/external/qemu-pc-bios" />
+  <project path="external/qrngd" name="CyanogenMod/android_external_qrngd" remote="cm" revision="cm-11.0" />
+  <project path="external/regex-re2" name="CyanogenMod/android_external_regex-re2" remote="cm" revision="cm-11.0" />
+  <project path="external/replicaisland" name="platform/external/replicaisland" />
+  <project path="external/robolectric" name="platform/external/robolectric" />
+  <project path="external/safe-iop" name="platform/external/safe-iop" groups="pdk" />
+  <project path="external/scrypt" name="platform/external/scrypt" groups="pdk" />
+  <project path="external/sepolicy" name="CyanogenMod/android_external_sepolicy" remote="cm" revision="cm-11.0" />
+  <project path="external/sfntly" name="platform/external/sfntly" />
+  <project path="external/sil-fonts" name="platform/external/sil-fonts" />
+  <project path="external/skia" name="CyanogenMod/android_external_skia" remote="cm" revision="cm-11.0" />
+  <project path="external/smack" name="platform/external/smack" />
+  <project path="external/smali" name="platform/external/smali" />
+  <project path="external/sonivox" name="platform/external/sonivox" groups="pdk" />
+  <project path="external/speex" name="platform/external/speex" groups="pdk" />
+  <project path="external/sqlite" name="CyanogenMod/android_external_sqlite" remote="cm" revision="cm-11.0" groups="pdk" />
+  <project path="external/srec" name="CyanogenMod/android_external_srec" remote="cm" revision="cm-11.0" />
+  <project path="external/srtp" name="platform/external/srtp" />
+  <project path="external/stagefright-plugins" name="CyanogenMod/android_external_stagefright-plugins" remote="cm" revision="cm-11.0" groups="pdk" />
+  <project path="external/stlport" name="platform/external/stlport" groups="pdk" />
+  <project path="external/strace" name="CyanogenMod/android_external_strace" remote="cm" revision="cm-11.0" />
+  <project path="external/stressapptest" name="platform/external/stressapptest" />
+  <project path="external/svox" name="platform/external/svox" />
+  <project path="external/tagsoup" name="platform/external/tagsoup" />
+  <project path="external/tcpdump" name="platform/external/tcpdump" />
+  <project path="external/timezonepicker-support" name="platform/external/timezonepicker-support" />
+  <project path="external/tinyalsa" name="CyanogenMod/android_external_tinyalsa" remote="cm" revision="cm-11.0" groups="pdk" />
+  <project path="external/tinycompress" name="CyanogenMod/android_external_tinycompress" remote="cm" revision="cm-11.0" groups="pdk" />
+  <project path="external/tinyxml" name="platform/external/tinyxml" groups="pdk" />
+  <project path="external/tinyxml2" name="platform/external/tinyxml2" groups="pdk" />
+  <project path="external/tremolo" name="platform/external/tremolo" groups="pdk" />
+  <project path="external/v8" name="platform/external/v8" />
+  <project path="external/valgrind" name="platform/external/valgrind" groups="pdk" />
+  <project path="external/webp" name="platform/external/webp" />
+  <project path="external/webrtc" name="platform/external/webrtc" groups="pdk" />
+  <project path="external/wpa_supplicant_8" name="CyanogenMod/android_external_wpa_supplicant_8" remote="cm" revision="cm-11.0" groups="pdk"/>
+  <project path="external/wpa_supplicant_8_ti" name="AOKP/external_wpa_supplicant_8_ti" remote="aokp" revision="kitkat" />
+  <project path="external/xmlwriter" name="platform/external/xmlwriter" />
+  <project path="external/xmp_toolkit" name="platform/external/xmp_toolkit" />
+  <project path="external/yaffs2" name="AOKP/external_yaffs2" remote="aokp" revision="kitkat" groups="pdk" />
+  <project path="external/zlib" name="AOKP/external_zlib" remote="aokp" revision="kitkat" groups="pdk" />
+  <project path="external/zxing" name="platform/external/zxing" />
+  <project path="frameworks/av" name="android_platform_frameworks_av" remote="plain" revision="kk"  />
+  <project path="frameworks/base" name="android_platform_frameworks_base" remote="plain" revision="kk" />
+  <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
+  <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
+  <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
+  <project path="frameworks/ex" name="platform/frameworks/ex" />
+  <project path="frameworks/mff" name="platform/frameworks/mff" />
+  <project path="frameworks/ml" name="platform/frameworks/ml" />
+  <project path="frameworks/native" name="android_platform_frameworks_native" remote="plain" revision="kk" />
+  <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" />
+  <project path="frameworks/opt/carddav" name="platform/frameworks/opt/carddav" />
+  <project path="frameworks/opt/colorpicker" name="platform/frameworks/opt/colorpicker"/>
+  <project path="frameworks/opt/datetimepicker" name="android_platform_frameworks_opt_datetimepicker" remote="plain" revision="kk" />
+  <project path="frameworks/opt/emoji" name="platform/frameworks/opt/emoji" />
+  <project path="frameworks/opt/inputmethodcommon" name="platform/frameworks/opt/inputmethodcommon" />
+  <project path="frameworks/opt/mailcommon" name="platform/frameworks/opt/mailcommon" />
+  <project path="frameworks/opt/mms" name="platform/frameworks/opt/mms" />
+  <project path="frameworks/opt/net/voip" name="android_platform_frameworks_opt_net_voip" remote="plain" revision="kk" />
+  <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" />
+  <project path="frameworks/opt/timezonepicker" name="platform/frameworks/opt/timezonepicker" />
+  <project path="frameworks/opt/telephony" name="android_platform_frameworks_opt_telephony" remote="plain" revision="kk" />
+  <project path="frameworks/opt/vcard" name="android_platform_frameworks_opt_vcard" remote="plain" revision="kk" />
+  <project path="frameworks/opt/widget" name="platform/frameworks/opt/widget" />
+  <project path="frameworks/rs" name="android_platform_frameworks_rs" remote="plain" revision="kk" />
+  <project path="frameworks/support" name="platform/frameworks/support" />
+  <project path="frameworks/testing" name="platform/frameworks/testing" />
+  <project path="frameworks/volley" name="platform/frameworks/volley" />
+  <project path="frameworks/webview" name="platform/frameworks/webview" />
+  <project path="frameworks/wilhelm" name="platform/frameworks/wilhelm" />
+  <project path="hardware/akm" name="platform/hardware/akm" />
+  <project path="hardware/broadcom/libbt" name="CyanogenMod/android_hardware_broadcom_libbt" remote="cm" revision="cm-11.0" groups="pdk" />
+  <project path="hardware/broadcom/wlan" name="CyanogenMod/android_hardware_broadcom_wlan" remote="cm" revision="cm-11.0" groups="broadcom_wlan" />
+  <project path="hardware/cm" name="CyanogenMod/android_hardware_cm" remote="cm" revision="cm-11.0" />
+  <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />
+  <project path="hardware/libhardware" name="CyanogenMod/android_hardware_libhardware" remote="cm" revision="cm-11.0" groups="pdk" />
+  <project path="hardware/libhardware_legacy" name="CyanogenMod/android_hardware_libhardware_legacy" remote="cm" revision="cm-11.0" groups="pdk" />
+  <project path="hardware/qcom/audio" name="CyanogenMod/android_hardware_qcom_audio" remote="cm" revision="cm-11.0" groups="qcom" />
+  <project path="hardware/qcom/audio-caf" name="CyanogenMod/android_hardware_qcom_audio-caf" remote="cm" revision="cm-11.0" groups="caf" />
+  <project path="hardware/qcom/bt" name="CyanogenMod/android_hardware_qcom_bt" remote="cm" revision="cm-11.0" groups="qcom" />
+  <project path="hardware/qcom/camera" name="CyanogenMod/android_hardware_qcom_camera" groups="qcom" remote="cm" revision="cm-11.0" />
+  <project path="hardware/qcom/display" name="CyanogenMod/android_hardware_qcom_display" remote="cm" revision="cm-11.0" groups="qcom" />
+  <project path="hardware/qcom/display-caf" name="CyanogenMod/android_hardware_qcom_display-caf" remote="cm" revision="cm-11.0" groups="caf" />
+  <project path="hardware/qcom/display-caf-new" name="CyanogenMod/android_hardware_qcom_display-caf-new" remote="cm" revision="cm-11.0" groups="caf" />
+  <project path="hardware/qcom/fm" name="CyanogenMod/android_hardware_qcom_fm" remote="cm" revision="cm-11.0" groups="caf" />
+  <project path="hardware/qcom/gps" name="CyanogenMod/android_hardware_qcom_gps" remote="cm" revision="cm-11.0" groups="qcom" />
+  <project path="hardware/qcom/keymaster" name="CyanogenMod/android_hardware_qcom_keymaster" remote="cm" revision="cm-11.0" groups="qcom" />
+  <project path="hardware/qcom/media" name="CyanogenMod/android_hardware_qcom_media" remote="cm" revision="cm-11.0" groups="qcom" />
+  <project path="hardware/qcom/media-caf" name="CyanogenMod/android_hardware_qcom_media-caf" remote="cm" revision="cm-11.0" groups="caf" />
+  <project path="hardware/qcom/media-caf-new" name="CyanogenMod/android_hardware_qcom_media-caf-new" remote="cm" revision="cm-11.0" groups="caf" />
+  <project path="hardware/qcom/msm8960" name="platform/hardware/qcom/msm8960" groups="qcom_msm8960" />
+  <project path="hardware/qcom/msm8x74" name="platform/hardware/qcom/msm8x74" groups="qcom_msm8x74" />
+  <project path="hardware/qcom/power" name="CyanogenMod/android_hardware_qcom_power" remote="cm" revision="cm-11.0" />
+  <project path="hardware/qcom/sensors" name="platform/hardware/qcom/sensors" />
+  <project path="hardware/qcom/wlan" name="CyanogenMod/android_hardware_qcom_wlan" remote="cm" revision="cm-11.0" />
+  <project path="hardware/ril" name="CyanogenMod/android_hardware_ril" remote="cm" revision="cm-11.0" groups="pdk" />
+  <project path="hardware/samsung" name="CyanogenMod/android_hardware_samsung" remote="cm" revision="cm-11.0" />
+  <project path="hardware/samsung_slsi/exynos" name="CyanogenMod/android_hardware_samsung_slsi_exynos" remote="cm" revision="cm-11.0" />
+  <project path="hardware/samsung_slsi/exynos5" name="CyanogenMod/android_hardware_samsung_slsi_exynos5" remote="cm" revision="cm-11.0" />
+  <project path="hardware/samsung_slsi/exynos5410" name="CyanogenMod/android_hardware_samsung_slsi_exynos5410" remote="cm" revision="cm-11.0" />
+  <project path="hardware/samsung_slsi/exynos5-insignal" name="CyanogenMod/android_hardware_samsung_slsi_exynos5-insignal" remote="cm" revision="cm-11.0" />
+  <project path="hardware/samsung_slsi/openmax" name="CyanogenMod/android_hardware_samsung_slsi_openmax" remote="cm"  revision="cm-11.0" />
+  <project path="hardware/sony/DASH" name="CyanogenMod/android_hardware_sony_DASH" remote="cm" revision="cm-11.0" />
+  <project path="hardware/ti/omap3" name="platform/hardware/ti/omap3" />
+  <project path="hardware/ti/omap4xxx" name="CyanogenMod/android_hardware_ti_omap4xxx" remote="cm" revision="cm-11.0" />
+  <project path="hardware/ti/wlan" name="CyanogenMod/android_hardware_ti_wlan" remote="cm" revision="cm-11.0" />
+  <project path="hardware/ti/wpan" name="CyanogenMod/android_hardware_ti_wpan" remote="cm" revision="cm-11.0" />
+   <project path="libcore" name="AOKP/libcore" remote="aokp" revision="kitkat" />
+  <project path="libnativehelper" name="platform/libnativehelper" groups="pdk-java" />
+  <project path="ndk" name="platform/ndk" />
+  <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" />
+  <project path="packages/apps/Bluetooth" name="CyanogenMod/android_packages_apps_Bluetooth" remote="cm" revision="cm-11.0" />
+  <project path="packages/apps/BluetoothExt" name="CyanogenMod/android_packages_apps_BluetoothExt" remote="cm" revision="cm-11.0" />
+  <project path="packages/apps/Browser" name="android_platform_packages_apps_Browser" remote="plain" revision="kk" />
+  <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" />
+  <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" />
+  <project path="packages/apps/Camera" name="platform/packages/apps/Camera" groups="notdefault,legacypackages" />
+  <project path="packages/apps/Camera2" name="AOKP/packages_apps_Camera2" remote="aokp" revision="kitkat" />
+  <project path="packages/apps/CellBroadcastReceiver" name="platform/packages/apps/CellBroadcastReceiver" />
+  <project path="packages/apps/CertInstaller" name="platform/packages/apps/CertInstaller" />
+  <project path="packages/apps/Contacts" name="AOKP/packages_apps_Contacts" remote="aokp" revision="kitkat" />
+  <project path="packages/apps/ContactsCommon" name="platform/packages/apps/ContactsCommon" />
+  <project path="packages/apps/DeskClock" name="AOKP/packages_apps_DeskClock" remote="aokp" revision="kitkat" />
+  <project path="packages/apps/Dialer" name="AOKP/packages_apps_Dialer" remote="aokp" revision="kitkat" />
+  <project path="packages/apps/Email" name="platform/packages/apps/Email" />
+  <project path="packages/apps/Exchange" name="platform/packages/apps/Exchange" />
+  <project path="packages/apps/Gallery" name="platform/packages/apps/Gallery" groups="notdefault,legacypackages" />
+  <project path="packages/apps/Gallery2" name="AOKP/packages_apps_Gallery2" remote="aokp" revision="kitkat" />
+  <project path="packages/apps/HTMLViewer" name="platform/packages/apps/HTMLViewer" />
+  <project path="packages/apps/InCallUI" name="AOKP/packages_apps_InCallUI" remote="aokp" revision="kitkat" />
+  <project path="packages/apps/KeyChain" name="platform/packages/apps/KeyChain" />
+  <project path="packages/apps/Launcher2" name="platform/packages/apps/Launcher2" groups="notdefault,legacypackages" />
+  <project path="packages/apps/Launcher3" name="AOKP/packages_apps_Launcher3" remote="aokp" revision="kitkat" />
+  <project path="packages/apps/LegacyCamera" name="platform/packages/apps/LegacyCamera" />
+  <project path="packages/apps/Mms" name="AOKP/packages_apps_Mms" remote="aokp" revision="kitkat" />
+  <project path="packages/apps/Music" name="platform/packages/apps/Music" groups="notdefault,legacypackages" />
+  <project path="packages/apps/MusicFX" name="platform/packages/apps/MusicFX" />
+  <project path="packages/apps/Nfc" name="AOKP/packages_apps_Nfc" remote="aokp" revision="kitkat" />
+  <project path="packages/apps/OneTimeInitializer" name="platform/packages/apps/OneTimeInitializer" />
+  <project path="packages/apps/PackageInstaller" name="platform/packages/apps/PackageInstaller" />
+  <project path="packages/apps/Phone" name="platform/packages/apps/Phone" groups="notdefault,legacypackages" />
+  <project path="packages/apps/PhoneCommon" name="platform/packages/apps/PhoneCommon" />
+  <project path="packages/apps/Protips" name="platform/packages/apps/Protips" groups="notdefault,legacypackages" />
+  <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
+  <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" groups="notdefault,legacypackages" />
+  <project path="packages/apps/PerformanceControl" name="IllusionRom/android_platform_packages_apps_PerformanceControl" remote="gh" revision="illusion-4.4" />
+  <project path="packages/apps/SamsungServiceMode" name="CyanogenMod/android_packages_apps_SamsungServiceMode" remote="cm" revision="cm-11.0" />
+  <project path="packages/apps/Settings" name="android_platform_packages_apps_Settings" remote="plain" revision="kk" />
+  <project path="packages/apps/SmartCardService" name="platform/packages/apps/SmartCardService" />
+  <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" />
+  <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" />
+  <project path="packages/apps/SpeechRecorder" name="platform/packages/apps/SpeechRecorder" />
+  <project path="packages/apps/Stk" name="platform/packages/apps/Stk" />
+  <project path="packages/apps/Tag" name="platform/packages/apps/Tag" />
+  <project path="packages/apps/ThemeChooser" name="CyanogenMod/android_packages_apps_ThemeChooser" remote="cm" revision="cm-11.0" />
+  <project path="packages/apps/Torch" name="AOKP/packages_apps_Torch" remote="aokp" revision="kitkat" />
+  <project path="packages/apps/UnifiedEmail" name="platform/packages/apps/UnifiedEmail" />
+  <project path="packages/apps/VideoEditor" name="platform/packages/apps/VideoEditor" groups="notdefault,legacypackages" />
+  <project path="packages/apps/VoiceDialer" name="platform/packages/apps/VoiceDialer" groups="notdefault,legacypackages"/>
+  <project path="packages/experimental" name="platform/packages/experimental" />
+  <project path="packages/inputmethods/LatinIME" name="AOKP/packages_input_LatinIME" remote="aokp" revision="kitkat" />
+  <project path="packages/inputmethods/OpenWnn" name="platform/packages/inputmethods/OpenWnn" />
+  <project path="packages/inputmethods/PinyinIME" name="platform/packages/inputmethods/PinyinIME" />
+  <project path="packages/providers/ApplicationsProvider" name="platform/packages/providers/ApplicationsProvider" />
+  <project path="packages/providers/CalendarProvider" name="platform/packages/providers/CalendarProvider" />
+  <project path="packages/providers/ContactsProvider" name="AOKP/packages_providers_ContactsProvider" remote="aokp" revision="kitkat" />
+  <project path="packages/providers/DownloadProvider" name="AOKP/packages_providers_DownloadProvider" remote="aokp" revision="kitkat" />
+  <project path="packages/providers/MediaProvider" name="AOKP/packages_providers_MediaProvider" remote="aokp" revision="kitkat" />
+  <project path="packages/providers/PartnerBookmarksProvider" name="platform/packages/providers/PartnerBookmarksProvider" />
+  <project path="packages/providers/TelephonyProvider" name="AOKP/packages_providers_TelephonyProvider" remote="aokp" revision="kitkat" />
+  <project path="packages/providers/ThemesProvider" name="CyanogenMod/android_packages_providers_ThemesProvider" remote="cm" revision="cm-11.0" />
+  <project path="packages/providers/UserDictionaryProvider" name="platform/packages/providers/UserDictionaryProvider" />
+  <project path="packages/screensavers/Basic" name="platform/packages/screensavers/Basic" />
+  <project path="packages/screensavers/PhotoTable" name="platform/packages/screensavers/PhotoTable" />
+  <project path="packages/screensavers/WebView" name="platform/packages/screensavers/WebView" />
+  <project path="packages/services/Telephony" name="AOKP/packages_services_Telephony" remote="aokp" revision="kitkat" />
+  <project path="packages/wallpapers/Basic" name="platform/packages/wallpapers/Basic" groups="notdefault" />
+  <project path="packages/wallpapers/Galaxy4" name="platform/packages/wallpapers/Galaxy4" groups="notdefault" />
+  <project path="packages/wallpapers/HoloSpiral" name="platform/packages/wallpapers/HoloSpiral" groups="notdefault" />
+  <project path="packages/wallpapers/LivePicker" name="platform/packages/wallpapers/LivePicker" />
+  <project path="packages/wallpapers/MagicSmoke" name="platform/packages/wallpapers/MagicSmoke" groups="notdefault" />
+  <project path="packages/wallpapers/MusicVisualization" name="platform/packages/wallpapers/MusicVisualization" groups="notdefault" />
+  <project path="packages/wallpapers/NoiseField" name="platform/packages/wallpapers/NoiseField" groups="notdefault" />
+  <project path="packages/wallpapers/PhaseBeam" name="platform/packages/wallpapers/PhaseBeam" groups="notdefault" />
+  <project path="prebuilts/clang/darwin-x86/3.1" name="platform/prebuilts/clang/darwin-x86/3.1" groups="darwin" />
+  <project path="prebuilts/clang/darwin-x86/3.2" name="platform/prebuilts/clang/darwin-x86/3.2" groups="darwin" />
+  <project path="prebuilts/clang/darwin-x86/arm/3.3" name="platform/prebuilts/clang/darwin-x86/arm/3.3" groups="darwin,arm" />
+  <project path="prebuilts/clang/darwin-x86/host/3.3" name="platform/prebuilts/clang/darwin-x86/host/3.3" groups="darwin" />
+  <project path="prebuilts/clang/darwin-x86/mips/3.3" name="platform/prebuilts/clang/darwin-x86/mips/3.3" groups="darwin,mips,notdefault" />
+  <project path="prebuilts/clang/darwin-x86/x86/3.3" name="platform/prebuilts/clang/darwin-x86/x86/3.3" groups="darwin,x86,notdefault" />
+  <project path="prebuilts/clang/linux-x86/3.1" name="platform/prebuilts/clang/linux-x86/3.1" groups="linux" />
+  <project path="prebuilts/clang/linux-x86/3.2" name="platform/prebuilts/clang/linux-x86/3.2" groups="linux" />
+  <project path="prebuilts/clang/linux-x86/arm/3.3" name="platform/prebuilts/clang/linux-x86/arm/3.3" groups="linux,arm" />
+  <project path="prebuilts/clang/linux-x86/host/3.3" name="platform/prebuilts/clang/linux-x86/host/3.3" groups="linux" />
+  <project path="prebuilts/clang/linux-x86/mips/3.3" name="platform/prebuilts/clang/linux-x86/mips/3.3" groups="linux,mips,notdefault" />
+  <project path="prebuilts/clang/linux-x86/x86/3.3" name="platform/prebuilts/clang/linux-x86/x86/3.3" groups="linux,x86,notdefault" />
+  <project path="prebuilts/devtools" name="platform/prebuilts/devtools" />
+  <project path="prebuilts/eclipse" name="platform/prebuilts/eclipse"  />
+  <project path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.4.3" name="AOKP/prebuilts_gcc_darwin-x86_arm_arm-eabi-4.4.3" remote="aokp" revision="kitkat" groups="darwin,arm" />
+  <project path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.6" name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.6" groups="darwin,arm" />
+  <project path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.7" name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.7" remote="aosp" groups="pdk,darwin,arm" />
+  <project path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" revision="refs/heads/master" remote="aosp" groups="pdk,darwin,arm,notdefault" />
+  <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.6" name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.6" groups="darwin,arm" remote="aosp" />
+  <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.7" name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.7" groups="pdk,darwin,arm" />
+  <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.8" name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.8" revision="refs/heads/master" groups="pdk,darwin,arm,notdefault" />
+  <project path="prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.7" name="platform/prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.7" groups="pdk,darwin,x86,notdefault" />
+
+  <project path="prebuilts/gcc/darwin-x86/host/headers" name="platform/prebuilts/gcc/darwin-x86/host/headers" groups="pdk,darwin" />
+  <project path="prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" groups="pdk,darwin" />
+  <project path="prebuilts/gcc/darwin-x86/mips/mipsel-linux-android-4.6" name="platform/prebuilts/gcc/darwin-x86/mips/mipsel-linux-android-4.6" groups="darwin,mips,notdefault" />
+  <project path="prebuilts/gcc/darwin-x86/mips/mipsel-linux-android-4.7" name="platform/prebuilts/gcc/darwin-x86/mips/mipsel-linux-android-4.7" groups="pdk,darwin,mips,notdefault" />
+  <project path="prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.6" name="platform/prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.6" groups="darwin,x86,notdefault" />
+  <project path="prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.7" name="platform/prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.7" groups="pdk,darwin,x86,notdefault" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.4.3" name="AOKP/prebuilts_gcc_linux-x86_arm_arm-eabi-4.4.3" remote="aokp" revision="kitkat" groups="linux,arm" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.6" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.6" groups="linux,arm" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" groups="pdk,linux,arm" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" revision="refs/heads/master" groups="pdk,linux,arm,notdefault" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6" groups="linux,arm" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" groups="pdk,linux,arm" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" revision="refs/heads/master" groups="pdk,linux,arm,notdefault" />
+  <project path="prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.4.3" name="platform/prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.4.3" groups="linux" />
+  <project path="prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6" name="platform/prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6" groups="linux" />
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6" groups="linux" />
+  <project path="prebuilts/gcc/linux-x86/mips/mipsel-linux-android-4.6" name="platform/prebuilts/gcc/linux-x86/mips/mipsel-linux-android-4.6" groups="linux,mips,notdefault" />
+  <project path="prebuilts/gcc/linux-x86/mips/mipsel-linux-android-4.7" name="platform/prebuilts/gcc/linux-x86/mips/mipsel-linux-android-4.7" groups="pdk,linux,mips,notdefault" />
+  <project path="prebuilts/gcc/linux-x86/x86/i686-linux-android-4.6" name="platform/prebuilts/gcc/linux-x86/x86/i686-linux-android-4.6" groups="linux,x86,notdefault" />
+  <project path="prebuilts/gcc/linux-x86/x86/i686-linux-android-4.7" name="platform/prebuilts/gcc/linux-x86/x86/i686-linux-android-4.7" groups="pdk,linux,x86,notdefault" />
+  <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.7" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.7" groups="pdk,linux,x86,notdefault" />
+  <project path="prebuilts/gradle-plugin" name="platform/prebuilts/gradle-plugin" />
+  <project path="prebuilts/maven_repo/android" name="platform/prebuilts/maven_repo/android" />
+  <project path="prebuilts/misc" name="AOKP/prebuilts_misc" remote="aokp" revision="kitkat" groups="pdk" />
+  <project path="prebuilts/ndk" name="platform/prebuilts/ndk" groups="pdk" />
+  <project path="prebuilts/python/darwin-x86/2.7.5" name="platform/prebuilts/python/darwin-x86/2.7.5" groups="darwin" />
+  <project path="prebuilts/python/linux-x86/2.7.5" name="platform/prebuilts/python/linux-x86/2.7.5" groups="linux" />
+  <project path="prebuilts/qemu-kernel" name="platform/prebuilts/qemu-kernel" groups="pdk" />
+  <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk" />
+  <project path="prebuilts/runtime" name="platform/prebuilts/runtime" />
+  <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
+  <project path="sdk" name="platform/sdk" />
+  <project path="system/core" name="android_platform_system_core" remote="plain" revision="kk" />
+  <project path="system/extras" name="AOKP/system_extras" remote="aokp" revision="kitkat" groups="pdk" />
+  <project path="system/media" name="AOKP/system_media" remote="aokp" revision="kitkat" groups="pdk" />
+  <project path="system/netd" name="CyanogenMod/android_system_netd" remote="cm" revision="cm-11.0" groups="pdk" />
+  <project path="system/qcom" name="AOKP/system_qcom" remote="aokp" revision="kitkat" groups="pdk" />
+  <project path="system/security" name="platform/system/security" groups="pdk" />
+  <project path="system/vold" name="AOKP/system_vold" remote="aokp" revision="kitkat" groups="pdk" />
+<!--
+  <project path="tools/adt/eclipse" name="platform/tools/adt/eclipse" groups="notdefault,tools" />
+  <project path="tools/adt/idea" name="platform/tools/adt/idea" groups="notdefault,tools" />
+  <project path="tools/base" name="platform/tools/base" groups="notdefault,tools" />
+  <project path="tools/build" name="platform/tools/build" groups="notdefault,tools" />
+  <project path="tools/emulator" name="platform/tools/emulator" groups="notdefault,tools" />
+  <project path="tools/external/fat32lib" name="platform/tools/external/fat32lib" groups="tools" />
+  <project path="tools/external/gradle" name="platform/tools/external/gradle" groups="tools" />
+  <project path="tools/idea" name="platform/tools/idea" groups="notdefault,tools" />
+  <project path="tools/motodev" name="platform/tools/motodev" groups="notdefault,motodev" />
+  <project path="tools/studio/cloud" name="platform/tools/studio/cloud" groups="notdefault,tools" />
+  <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
+-->
+  <project path="vendor/plain" name="android_platform_vendor_plain" remote="plain" revision="kk" />
+  <project path="vendor/htc" name="AOKP/vendor_htc" remote="aokp" revision="kitkat" />
+  <project path="vendor/motorola" name="AOKP/vendor_motorola" remote="aokp" revision="kitkat" />
+  <project path="vendor/oneplus" name="AOKP/vendor_oneplus" remote="aokp" revision="kitkat" />
+  <project path="vendor/oppo" name="AOKP/vendor_oppo" remote="aokp" revision="kitkat" />
+  <project path="vendor/samsung" name="AOKP/vendor_samsung" remote="aokp" revision="kitkat" />
+  <project path="vendor/semc" name="AOKP/vendor_semc" remote="aokp" revision="kitkat" />
+  <project path="vendor/sony" name="AOKP/vendor_sony" remote="aokp" revision="kitkat" />
+
+  <project path="platform_manifest" name="platform_manifest" remote="plain" revision="kk" />
 
 </manifest>
