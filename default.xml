@@ -9,8 +9,10 @@
            fetch="https://github.com/" />
            
   <remote  name="plain"
-           fetch="https://github.com/Plain-Andy/"
-           />
+           fetch="https://github.com/Plain-Andy/" />
+
+  <remote  name="liquid"
+           fetch="https://github.com/LiquidSmooth/" />
            
   <remote  name="aokp"
            fetch="https://github.com/"
@@ -81,7 +83,7 @@
   <project path="external/bluetooth/bluedroid" name="CyanogenMod/android_external_bluetooth_bluedroid" remote="cm" revision="cm-11.0" groups="pdk" />
   <project path="external/bouncycastle" name="platform/external/bouncycastle" />
   <project path="external/bsdiff" name="platform/external/bsdiff" groups="pdk" />
-  <project path="external/busybox" name="AOKP/external_busybox" remote="aokp" revision="kitkat" />
+  <project path="external/busybox" name="android_external_busybox" remote="liquid" revision="kitkat" />
   <project path="external/bzip2" name="platform/external/bzip2" groups="pdk" />
   <project path="external/ceres-solver" name="platform/external/ceres-solver" />
   <project path="external/checkpolicy" name="platform/external/checkpolicy" groups="pdk" />
