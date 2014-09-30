@@ -371,7 +371,7 @@
   <project path="packages/apps/Launcher2" name="platform/packages/apps/Launcher2" groups="notdefault,legacypackages" />
   <project path="packages/apps/Launcher3" name="AOKP/packages_apps_Launcher3" remote="aokp" revision="kitkat" />
   <project path="packages/apps/LegacyCamera" name="platform/packages/apps/LegacyCamera" />
-  <project path="packages/apps/Mms" name="android_platform_packages_apps_Mms" remote="plain" revision="kk" />
+  <project path="packages/apps/Mms" name="android_platform_packages_apps_Mms" remote="plain" revision="kksigh" />
   <project path="packages/apps/Music" name="platform/packages/apps/Music" groups="notdefault,legacypackages" />
   <project path="packages/apps/MusicFX" name="platform/packages/apps/MusicFX" />
   <project path="packages/apps/Nfc" name="AOKP/packages_apps_Nfc" remote="aokp" revision="kitkat" />
@@ -384,6 +384,7 @@
   <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" groups="notdefault,legacypackages" />
   <project path="packages/apps/PerformanceControl" name="IllusionRom/android_platform_packages_apps_PerformanceControl" remote="gh" revision="illusion-4.4" />
   <project path="packages/apps/SamsungServiceMode" name="CyanogenMod/android_packages_apps_SamsungServiceMode" remote="cm" revision="cm-11.0" />
+  <project path="packages/apps/SlimFileManager" name="packages_apps_SlimFileManager" remote="plain" revision="kk" />
   <project path="packages/apps/Settings" name="android_platform_packages_apps_Settings" remote="plain" revision="kk" />
   <project path="packages/apps/SmartCardService" name="platform/packages/apps/SmartCardService" />
   <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" />
