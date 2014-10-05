@@ -62,8 +62,15 @@
   <project path="device/htc/vigor" name="device_htc_vigor" remote="plain" revision="kk" />
   <project path="device/htc/msm8660-common" name="android_device_htc_msm8660-common" remote="plain" revision="kk" />
   <project path="device/lge/g2-common" name="android_device_lge_g2-common" remote="plain" revision="kk_2" />
-  <project path="device/lge/vs980" name="android_device_lge_vs980" remote="plain" revision="kk" />
   <project path="device/lge/d800" name="android_device_lge_d800" remote="plain" revision="kk" />
+  <project path="device/lge/d801" name="android_device_lge_d801" remote="plain" revision="kk" />
+  <project path="device/lge/d802" name="android_device_lge_d802" remote="plain" revision="kk" />
+  <project path="device/lge/d803" name="android_device_lge_d803" remote="plain" revision="kk" />
+  <project path="device/lge/ls980" name="android_device_lge_ls980" remote="plain" revision="kk" />
+  <project path="device/lge/vs980" name="android_device_lge_vs980" remote="plain" revision="kk" />
+  <project path="device/samsung/apexqtmo" name="android_device_samsung_apexqtmo" remote="plain" revision="kk" />
+  <project path="device/samsung/msm8960-common" name="android_device_samsung_msm8960-common" remote="plain" revision="kk" />
+  <project path="device/samsung/qcom-common" name="android_device_samsung_qcom-common" remote="plain" revision="kk" />
   <project path="docs/source.android.com" name="platform/docs/source.android.com" />
   <project path="external/aac" name="CyanogenMod/android_external_aac" remote="cm" revision="cm-11.0" />
   <project path="external/android-clat" name="platform/external/android-clat" />
