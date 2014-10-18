@@ -504,13 +504,13 @@
   <project path="vendor/plain" name="android_platform_vendor_plain" remote="plain" revision="kk" />
   <project path="vendor/htc" name="AOKP/vendor_htc" remote="aokp" revision="kitkat" />
   <project path="vendor/motorola" name="AOKP/vendor_motorola" remote="aokp" revision="kitkat" />
-  <project path="vendor/samsung" name="AOKP/vendor_samsung" remote="aokp" revision="kitkat" />
   <project path="platform_manifest" name="platform_manifest" remote="plain" revision="kk" />
 
 <!-- Currently unused repos
   <project path="packages/apps/Camera" name="platform/packages/apps/Camera" groups="notdefault,legacypackages" />
   <project path="vendor/oneplus" name="AOKP/vendor_oneplus" remote="aokp" revision="kitkat" />
   <project path="vendor/oppo" name="AOKP/vendor_oppo" remote="aokp" revision="kitkat" />
+  <project path="vendor/samsung" name="AOKP/vendor_samsung" remote="aokp" revision="kitkat" />
   <project path="vendor/semc" name="AOKP/vendor_semc" remote="aokp" revision="kitkat" />
   <project path="vendor/sony" name="AOKP/vendor_sony" remote="aokp" revision="kitkat" />
   <project path="packages/inputmethods/OpenWnn" name="platform/packages/inputmethods/OpenWnn" />
