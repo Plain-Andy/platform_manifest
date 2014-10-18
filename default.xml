@@ -352,7 +352,6 @@
   <project path="hardware/samsung_slsi/exynos5410" name="CyanogenMod/android_hardware_samsung_slsi_exynos5410" remote="cm" revision="cm-11.0" />
   <project path="hardware/samsung_slsi/exynos5-insignal" name="CyanogenMod/android_hardware_samsung_slsi_exynos5-insignal" remote="cm" revision="cm-11.0" />
   <project path="hardware/samsung_slsi/openmax" name="CyanogenMod/android_hardware_samsung_slsi_openmax" remote="cm"  revision="cm-11.0" />
-  <project path="hardware/sony/DASH" name="CyanogenMod/android_hardware_sony_DASH" remote="cm" revision="cm-11.0" />
   <project path="hardware/ti/omap3" name="platform/hardware/ti/omap3" />
   <project path="hardware/ti/omap4xxx" name="CyanogenMod/android_hardware_ti_omap4xxx" remote="cm" revision="cm-11.0" />
   <project path="hardware/ti/wlan" name="CyanogenMod/android_hardware_ti_wlan" remote="cm" revision="cm-11.0" />
@@ -366,9 +365,7 @@
   <project path="packages/apps/Browser" name="android_platform_packages_apps_Browser" remote="plain" revision="kk" />
   <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" />
   <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" />
-  <project path="packages/apps/Camera" name="platform/packages/apps/Camera" groups="notdefault,legacypackages" />
   <project path="packages/apps/Camera2" name="AOKP/packages_apps_Camera2" remote="aokp" revision="kitkat" />
-  <project path="packages/apps/CellBroadcastReceiver" name="platform/packages/apps/CellBroadcastReceiver" />
   <project path="packages/apps/CertInstaller" name="platform/packages/apps/CertInstaller" />
   <project path="packages/apps/Contacts" name="AOKP/packages_apps_Contacts" remote="aokp" revision="kitkat" />
   <project path="packages/apps/ContactsCommon" name="platform/packages/apps/ContactsCommon" />
@@ -376,12 +373,10 @@
   <project path="packages/apps/Dialer" name="AOKP/packages_apps_Dialer" remote="aokp" revision="kitkat" />
   <project path="packages/apps/Email" name="platform/packages/apps/Email" />
   <project path="packages/apps/Exchange" name="platform/packages/apps/Exchange" />
-  <project path="packages/apps/Gallery" name="platform/packages/apps/Gallery" groups="notdefault,legacypackages" />
   <project path="packages/apps/Gallery2" name="AOKP/packages_apps_Gallery2" remote="aokp" revision="kitkat" />
   <project path="packages/apps/HTMLViewer" name="platform/packages/apps/HTMLViewer" />
   <project path="packages/apps/InCallUI" name="AOKP/packages_apps_InCallUI" remote="aokp" revision="kitkat" />
   <project path="packages/apps/KeyChain" name="platform/packages/apps/KeyChain" />
-  <project path="packages/apps/Launcher2" name="platform/packages/apps/Launcher2" groups="notdefault,legacypackages" />
   <project path="packages/apps/Launcher3" name="AOKP/packages_apps_Launcher3" remote="aokp" revision="kitkat" />
   <project path="packages/apps/LegacyCamera" name="platform/packages/apps/LegacyCamera" />
   <project path="packages/apps/Mms" name="android_platform_packages_apps_Mms" remote="plain" revision="kk" />
@@ -392,7 +387,6 @@
   <project path="packages/apps/PackageInstaller" name="platform/packages/apps/PackageInstaller" />
   <project path="packages/apps/Phone" name="platform/packages/apps/Phone" groups="notdefault,legacypackages" />
   <project path="packages/apps/PhoneCommon" name="platform/packages/apps/PhoneCommon" />
-  <project path="packages/apps/Protips" name="platform/packages/apps/Protips" groups="notdefault,legacypackages" />
   <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
   <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" groups="notdefault,legacypackages" />
   <project path="packages/apps/PerformanceControl" name="IllusionRom/android_platform_packages_apps_PerformanceControl" remote="gh" revision="illusion-4.4" />
@@ -410,10 +404,7 @@
   <project path="packages/apps/UnifiedEmail" name="platform/packages/apps/UnifiedEmail" />
   <project path="packages/apps/VideoEditor" name="platform/packages/apps/VideoEditor" groups="notdefault,legacypackages" />
   <project path="packages/apps/VoiceDialer" name="platform/packages/apps/VoiceDialer" groups="notdefault,legacypackages"/>
-  <project path="packages/experimental" name="platform/packages/experimental" />
   <project path="packages/inputmethods/LatinIME" name="AOKP/packages_input_LatinIME" remote="aokp" revision="kitkat" />
-  <project path="packages/inputmethods/OpenWnn" name="platform/packages/inputmethods/OpenWnn" />
-  <project path="packages/inputmethods/PinyinIME" name="platform/packages/inputmethods/PinyinIME" />
   <project path="packages/providers/ApplicationsProvider" name="platform/packages/providers/ApplicationsProvider" />
   <project path="packages/providers/CalendarProvider" name="platform/packages/providers/CalendarProvider" />
   <project path="packages/providers/ContactsProvider" name="AOKP/packages_providers_ContactsProvider" remote="aokp" revision="kitkat" />
@@ -513,12 +504,24 @@
   <project path="vendor/plain" name="android_platform_vendor_plain" remote="plain" revision="kk" />
   <project path="vendor/htc" name="AOKP/vendor_htc" remote="aokp" revision="kitkat" />
   <project path="vendor/motorola" name="AOKP/vendor_motorola" remote="aokp" revision="kitkat" />
+  <project path="vendor/samsung" name="AOKP/vendor_samsung" remote="aokp" revision="kitkat" />
+  <project path="platform_manifest" name="platform_manifest" remote="plain" revision="kk" />
+
+<!-- Currently unused repos
+  <project path="packages/apps/Camera" name="platform/packages/apps/Camera" groups="notdefault,legacypackages" />
   <project path="vendor/oneplus" name="AOKP/vendor_oneplus" remote="aokp" revision="kitkat" />
   <project path="vendor/oppo" name="AOKP/vendor_oppo" remote="aokp" revision="kitkat" />
-  <project path="vendor/samsung" name="AOKP/vendor_samsung" remote="aokp" revision="kitkat" />
   <project path="vendor/semc" name="AOKP/vendor_semc" remote="aokp" revision="kitkat" />
   <project path="vendor/sony" name="AOKP/vendor_sony" remote="aokp" revision="kitkat" />
+  <project path="packages/inputmethods/OpenWnn" name="platform/packages/inputmethods/OpenWnn" />
+  <project path="packages/inputmethods/PinyinIME" name="platform/packages/inputmethods/PinyinIME" />
+  <project path="packages/apps/Protips" name="platform/packages/apps/Protips" groups="notdefault,legacypackages" />
+  <project path="packages/apps/Launcher2" name="platform/packages/apps/Launcher2" groups="notdefault,legacypackages" />
+  <project path="packages/apps/Gallery" name="platform/packages/apps/Gallery" groups="notdefault,legacypackages" />
+  <project path="hardware/sony/DASH" name="CyanogenMod/android_hardware_sony_DASH" remote="cm" revision="cm-11.0" />
+  <project path="packages/apps/CellBroadcastReceiver" name="platform/packages/apps/CellBroadcastReceiver" />
+  <project path="packages/experimental" name="platform/packages/experimental" />
 
-  <project path="platform_manifest" name="platform_manifest" remote="plain" revision="kk" />
+-->
 
 </manifest>
