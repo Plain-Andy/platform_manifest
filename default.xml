@@ -337,7 +337,7 @@
   <project path="hardware/qcom/fm" name="CyanogenMod/android_hardware_qcom_fm" remote="cm" revision="cm-11.0" groups="caf" />
   <project path="hardware/qcom/gps" name="android_platform_hardware_qcom_gps" remote="plain" revision="kk" />
   <project path="hardware/qcom/keymaster" name="CyanogenMod/android_hardware_qcom_keymaster" remote="cm" revision="cm-11.0" groups="qcom" />
-  <project path="hardware/qcom/media" name="CyanogenMod/android_hardware_qcom_media" remote="cm" revision="cm-11.0" groups="qcom" />
+  <project path="hardware/qcom/media" name="android_platform_hardware_qcom_media" remote="plain" revision="kk" />
   <project path="hardware/qcom/media-caf" name="android_platform_hardware_qcom_media-caf" remote="plain" revision="kk" />
   <project path="hardware/qcom/media-caf-new" name="android_platform_hardware_qcom_media-caf-new" remote="plain" revision="kk" />
   <project path="hardware/qcom/msm8960" name="platform/hardware/qcom/msm8960" groups="qcom_msm8960" />
