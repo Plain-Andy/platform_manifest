@@ -75,8 +75,11 @@
   <project path="device/lge/ls980" name="android_device_lge_ls980" remote="plain" revision="kk" />
   <project path="device/lge/vs980" name="android_device_lge_vs980" remote="plain" revision="kk" />
   <project path="device/samsung/apexqtmo" name="android_device_samsung_apexqtmo" remote="plain" revision="kk" />
+  <project path="device/samsung/mondrianwifi" name="android_device_samsung_mondrianwifi" remote="plain" revision="kk" />
   <project path="device/samsung/msm8960-common" name="android_device_samsung_msm8960-common" remote="plain" revision="kk" />
+  <project path="device/samsung/msm8974-common" name="android_device_samsung_msm8974-common" remote="plain" revision="kk" />
   <project path="device/samsung/qcom-common" name="android_device_samsung_qcom-common" remote="plain" revision="kk" />
+  <project path="device/qcom/common" "CyanogenMod/android_device_qcom_common" remote="cm" revision="cm-11.0" />
   <project path="docs/source.android.com" name="platform/docs/source.android.com" />
   <project path="external/aac" name="CyanogenMod/android_external_aac" remote="cm" revision="cm-11.0" />
   <project path="external/android-clat" name="platform/external/android-clat" />
