@@ -532,5 +532,6 @@
   <project path="tools/swt" name="platform/tools/swt" />
   <project path="tools/tradefederation" name="platform/tools/tradefederation" />
   <project path="vendor/plain" name="android_platform_vendor_plain" remote="plain" revision="lp" />
+  <project path="platform_manifest" name="platform_manifest" remote="plain" revision="lp" />
 
 </manifest>
