@@ -22,7 +22,7 @@
            review="gerrit.aokp.co" />
 
   <remote  name="cm"
-           fetch="https://github.com/"
+           fetch="https://github.com/CyanogenMod/"
            review="review.cyanogenmod.org" />
 
   <remote name="omni"
@@ -89,6 +89,7 @@
   <project path="external/blktrace" name="platform/external/blktrace" />
   <project path="external/bluetooth/bluedroid" name="platform/external/bluetooth/bluedroid" />
   <project path="external/bouncycastle" name="platform/external/bouncycastle" />
+  <project path="external/busybox" name="android_external_busybox" remote="cm" revision="cm-12.0" />
   <project path="external/bsdiff" name="platform/external/bsdiff" />
   <project path="external/bzip2" name="platform/external/bzip2" />
   <project path="external/ceres-solver" name="platform/external/ceres-solver" />
@@ -190,6 +191,8 @@
   <project path="external/junit" name="platform/external/junit" />
   <project path="external/ksoap2" name="platform/external/ksoap2" />
   <project path="external/kernel-headers" name="platform/external/kernel-headers" />
+  <project path="external/koush/Superuser" name="Superuser" remote="cm" revision="cm-12.0" />
+  <project path="external/koush/Widgets" name="Widgets" remote="cm" revision="cm-12.0" />
   <project path="external/libcap-ng" name="platform/external/libcap-ng" />
   <project path="external/libcxx" name="platform/external/libcxx" />
   <project path="external/libcxxabi" name="platform/external/libcxxabi" />
@@ -414,7 +417,7 @@
   <project path="packages/apps/Protips" name="platform/packages/apps/Protips" />
   <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
   <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" />
-  <project path="packages/apps/Settings" name="platform/packages/apps/Settings" />
+  <project path="packages/apps/Settings" name="android_platform_packages_apps_Settings" remote="plain" revision="lp" />
   <project path="packages/apps/SmartCardService" name="platform/packages/apps/SmartCardService" />
   <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" />
   <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" />
@@ -505,7 +508,7 @@
   <project path="prebuilts/tools" name="platform/prebuilts/tools" />
   <project path="sdk" name="platform/sdk" />
   <project path="system/core" name="android_platform_system_core" remote="plain" revision="lp" />
-  <project path="system/extras" name="platform/system/extras" />
+  <project path="system/extras" name="android_platform_system_extras" remote="plain" revision="lp" />
   <project path="system/keymaster" name="platform/system/keymaster" />
   <project path="system/media" name="platform/system/media" />
   <project path="system/netd" name="platform/system/netd" />
