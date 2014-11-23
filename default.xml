@@ -71,16 +71,7 @@
   <project path="device/google/accessory/arduino" name="device/google/accessory/arduino" />
   <project path="device/google/accessory/demokit" name="device/google/accessory/demokit" />
   <project path="device/google/atv" name="device/google/atv" />
-  <project path="device/htc/flounder" name="device/htc/flounder" />
-  <project path="device/htc/flounder-kernel" name="device/htc/flounder-kernel" />
-  <project path="device/lge/hammerhead" name="device/lge/hammerhead" />
-  <project path="device/lge/hammerhead-kernel" name="device/lge/hammerhead-kernel" />
-  <project path="device/lge/mako" name="device/lge/mako" />
-  <project path="device/lge/mako-kernel" name="device/lge/mako-kernel" />
-  <project path="device/moto/shamu" name="device/moto/shamu" />
-  <project path="device/moto/shamu-kernel" name="device/moto/shamu-kernel" />
   <project path="device/sample" name="device/sample" />
-  <project path="device/samsung/manta" name="device/samsung/manta" />
   <project path="docs/source.android.com" name="platform/docs/source.android.com" />
   <project path="external/aac" name="platform/external/aac" />
   <project path="external/android-clat" name="platform/external/android-clat" />
