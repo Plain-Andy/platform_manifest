@@ -15,7 +15,11 @@
            fetch="https://github.com/Plain-Andy/" />
 
   <remote  name="liquid"
-           fetch="https://github.com/LiquidSmooth/" />
+           fetch="https://github.com/LiquidSmooth/" 
+           review="gerrit.liquidsmooth.net" />
+
+  <remote  name="slim"
+           fetch="https://github.com/SlimRoms/" />
            
   <remote  name="aokp"
            fetch="https://github.com/"
@@ -507,13 +511,13 @@
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" />
   <project path="prebuilts/tools" name="platform/prebuilts/tools" />
   <project path="sdk" name="platform/sdk" />
-  <project path="system/core" name="android_platform_system_core" remote="plain" revision="lp" />
-  <project path="system/extras" name="android_platform_system_extras" remote="plain" revision="lp" />
+  <project path="system/core" name="android_system_core" remote="slim" revision="lp5.0" />
+  <project path="system/extras" name="android_system_extras" remote="slim" revision="lp5.0" />
   <project path="system/keymaster" name="platform/system/keymaster" />
   <project path="system/media" name="platform/system/media" />
   <project path="system/netd" name="platform/system/netd" />
   <project path="system/security" name="platform/system/security" />
-  <project path="system/vold" name="platform/system/vold" />
+  <project path="system/vold" name="android_system_vold" remote="slim" revision="lp5.0" />
   <project path="tools/adt/eclipse" name="platform/tools/adt/eclipse" />
   <project path="tools/adt/idea" name="platform/tools/adt/idea" />
   <project path="tools/base" name="platform/tools/base" />
