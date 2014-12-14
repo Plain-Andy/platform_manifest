@@ -14,6 +14,10 @@
   <remote  name="plain"
            fetch="https://github.com/Plain-Andy/" />
 
+  <remote  name="aicp"
+           fetch="https://github.com/AICP/"
+	   review="gerrit.aicp-rom.com" />
+
   <remote  name="liquid"
            fetch="https://github.com/LiquidSmooth/" />
            
@@ -138,7 +142,7 @@
   <project path="external/dnsmasq" name="platform/external/dnsmasq" />
   <project path="external/doclava" name="platform/external/doclava" />
   <project path="external/droiddriver" name="platform/external/droiddriver" />
-  <project path="external/e2fsprogs" name="platform/external/e2fsprogs" />
+  <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="cm" revision="cm-12.0" />
   <project path="external/easymock" name="platform/external/easymock" />
   <project path="external/eclipse-basebuilder" name="platform/external/eclipse-basebuilder" />
   <project path="external/eclipse-windowbuilder" name="platform/external/eclipse-windowbuilder" />
@@ -504,13 +508,14 @@
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" />
   <project path="prebuilts/tools" name="platform/prebuilts/tools" />
   <project path="sdk" name="platform/sdk" />
-  <project path="system/core" name="android_platform_system_core" remote="plain" revision="lp" />
-  <project path="system/extras" name="android_platform_system_extras" remote="plain" revision="lp" />
-  <project path="system/keymaster" name="platform/system/keymaster" />
-  <project path="system/media" name="platform/system/media" />
-  <project path="system/netd" name="platform/system/netd" />
-  <project path="system/security" name="platform/system/security" />
-  <project path="system/vold" name="platform/system/vold" />
+  <project path="system/core" name="system_core" remote="aicp" revision="lp5.0" />
+  <project path="system/extras" name="android_system_extras" remote="cm" revision="cm-12.0" />
+  <project path="system/keymaster" name="android_system_keymaster" remote="cm" revision="cm-12.0" />
+  <project path="system/media" name="android_system_media" remote="cm" revision="cm-12.0" />
+  <project path="system/netd" name="android_system_netd" remote="cm" revision="cm-12.0" />
+  <project path="system/qcom" name="android_system_qcom" remote="cm" revision="cm-12.0" />
+  <project path="system/security" name="android_system_security" remote="cm" revision="cm-12.0" />
+  <project path="system/vold" name="android_system_vold" remote="cm" revision="cm-12.0" />
   <project path="tools/adt/eclipse" name="platform/tools/adt/eclipse" />
   <project path="tools/adt/idea" name="platform/tools/adt/idea" />
   <project path="tools/base" name="platform/tools/base" />
