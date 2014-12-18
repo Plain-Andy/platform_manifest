@@ -271,7 +271,7 @@
   <project path="external/scrypt" name="platform/external/scrypt" />
   <project path="external/sepolicy" name="android_external_sepolicy" remote="cm" revision="cm-12.0" />
   <project path="external/sfntly" name="platform/external/sfntly" />
-  <project path="external/skia" name="platform/external/skia" />
+  <project path="external/skia" name="android_platform_external_skia" remote="plain" revision="lp" />
   <project path="external/smack" name="platform/external/smack" />
   <project path="external/smali" name="platform/external/smali" />
   <project path="external/sonivox" name="platform/external/sonivox" />
@@ -383,7 +383,6 @@
   <project path="hardware/qcom/msm8x27" name="platform/hardware/qcom/msm8x27" />
   <project path="hardware/qcom/msm8x74" name="platform/hardware/qcom/msm8x74" />
   <project path="hardware/qcom/msm8x84" name="platform/hardware/qcom/msm8x84" />
-  <project path="hardware/qcom/power" name="platform/hardware/qcom/power" />
   <project path="hardware/qcom/sensors" name="platform/hardware/qcom/sensors" />
   <project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" remote="cm" revision="cm-12.0"/>
   <project path="hardware/ril" name="android_hardware_ril" remote="cm" revision="cm-12.0" />
