@@ -326,9 +326,9 @@
   <project path="frameworks/opt/carddav" name="platform/frameworks/opt/carddav" />
   <project path="frameworks/opt/chips" name="platform/frameworks/opt/chips" />
   <project path="frameworks/opt/colorpicker" name="platform/frameworks/opt/colorpicker" />
- <project path="frameworks/opt/datetimepicker" name="android_platform_frameworks_opt_datetimepicker" remote="plain" revision="lp" />
+  <project path="frameworks/opt/datetimepicker" name="android_platform_frameworks_opt_datetimepicker" remote="plain" revision="lp" />
   <project path="frameworks/opt/emoji" name="platform/frameworks/opt/emoji" />
-  <project path="frameworks/opt/hardware" name="android_frameworks_opt_hardware" remote="cm" revision="cm-12.0" />
+  <project path="frameworks/opt/hardware" name="CyanogenMod/android_frameworks_opt_hardware" remote="cm" revision="cm-12.0" />
   <project path="frameworks/opt/inputmethodcommon" name="platform/frameworks/opt/inputmethodcommon" />
   <project path="frameworks/opt/mms" name="CyanogenMod/android_frameworks_opt_mms" remote="cm" revision="cm-12.0" groups="pdk-cw-fs" />
   <project path="frameworks/opt/net/ims" name="CyanogenMod/android_frameworks_opt_net_ims" remote="cm" revision="cm-12.0" groups="frameworks_ims,pdk-cw-fs" />
