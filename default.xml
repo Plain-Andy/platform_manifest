@@ -558,7 +558,7 @@
   <project path="tools/studio/translation" name="platform/tools/studio/translation" groups="notdefault,tools" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
   <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="notdefault,tradefed" />
-  <project path="vendor/plain" name="android_platform_vendor_plain" remote="plain" revision="lp-legacy" />
+  <project path="vendor/plain" name="android_platform_vendor_plain" remote="pa-legacy" revision="lp-legacy" />
   <project path="platform_manifest" name="platform_manifest" remote="pa-legacy" revision="lp-legacy" />
 
 </manifest>
