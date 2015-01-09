@@ -22,7 +22,10 @@
 
   <remote  name="aicp"
            fetch="https://github.com/AICP/"
-	   review="gerrit.aicp-rom.com" />
+		   review="gerrit.aicp-rom.com" />
+
+  <remote  name="liquid"
+           fetch="https://github.com/LiquidSmooth/" />
 
   <remote  name="cm"
            fetch="https://github.com/"
