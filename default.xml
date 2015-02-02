@@ -46,7 +46,7 @@
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" />
-  <project path="art" name="CyanogenMod/android_art" remote="cm" revision="cm-12.0" />
+  <project path="art" name="android_art" remote="pa-legacy" revision="lp" />
   <project path="bionic" name="android_bionic" remote="pa-legacy" revision="lp" />
   <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" />
   <project path="bootable/recovery" name="CyanogenMod/android_bootable_recovery" remote="cm" revision="cm-12.0"/>
@@ -74,8 +74,8 @@
   <project path="device/google/accessory/arduino" name="device/google/accessory/arduino" />
   <project path="device/google/accessory/demokit" name="device/google/accessory/demokit" />
   <project path="device/google/atv" name="device/google/atv" />
-  <project path="device/qcom/common" name="CyanogenMod/android_device_qcom_common" remote="cm" revision="cm-12.0" />
-  <project path="device/qcom/sepolicy" name="CyanogenMod/android_device_qcom_sepolicy" remote="cm" revision="cm-12.0" />
+  <project path="device/qcom/common" name="android_device_qcom_common" remote="pl-devices" revision="cm-12.0" />
+  <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="pl-devices" revision="lp" />
   <project path="device/sample" name="device/sample" />
   <project path="docs/source.android.com" name="platform/docs/source.android.com" />
   <project path="external/aac" name="platform/external/aac" />
@@ -278,7 +278,7 @@
   <project path="external/robolectric" name="platform/external/robolectric" />
   <project path="external/safe-iop" name="platform/external/safe-iop" />
   <project path="external/scrypt" name="platform/external/scrypt" />
-  <project path="external/sepolicy" name="CyanogenMod/android_external_sepolicy" remote="cm" revision="cm-12.0" />
+  <project path="external/sepolicy" name="android_external_sepolicy" remote="pa-legacy" revision="lp" />
   <project path="external/sfntly" name="platform/external/sfntly" />
   <project path="external/skia" name="CyanogenMod/android_external_skia" remote="cm" revision="cm-12.0" />
   <project path="external/smack" name="platform/external/smack" />
