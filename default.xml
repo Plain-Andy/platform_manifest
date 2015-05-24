@@ -15,7 +15,7 @@
            fetch="https://github.com/LiquidSmooth/" />
            
   <remote  name="aokp"
-           fetch="https://github.com/"
+           fetch="https://github.com/AOKP/"
            review="gerrit.aokp.co" />
 
   <remote  name="cm"
@@ -97,7 +97,7 @@
   <project path="external/bluetooth/bluedroid" name="CyanogenMod/android_external_bluetooth_bluedroid" remote="cm" revision="cm-11.0" groups="pdk" />
   <project path="external/bouncycastle" name="platform/external/bouncycastle" />
   <project path="external/bsdiff" name="platform/external/bsdiff" groups="pdk" />
-  <project path="external/busybox" name="android_external_busybox" remote="liquid" revision="kitkat" />
+  <project path="external/busybox" name="external_busybox" remote="aokp" revision="kitkat" />
   <project path="external/bzip2" name="platform/external/bzip2" groups="pdk" />
   <project path="external/ceres-solver" name="platform/external/ceres-solver" />
   <project path="external/checkpolicy" name="platform/external/checkpolicy" groups="pdk" />
@@ -146,16 +146,16 @@
   <project path="external/embunit" name="platform/external/embunit" remote="ln" revision="linaro_android_4.4.4" />
   <project path="external/emma" name="platform/external/emma" />
   <project path="external/esd" name="platform/external/esd" />
-  <project path="external/exfat" name="AOKP/external_exfat" remote="aokp" revision="kitkat" />
+  <project path="external/exfat" name="external_exfat" remote="aokp" revision="kitkat" />
   <project path="external/expat" name="platform/external/expat" groups="pdk" />
   <project path="external/eyes-free" name="platform/external/eyes-free" />
-  <project path="external/f2fs-tools" name="AOKP/external_f2fs-tools" remote="aokp" revision="kitkat" />
+  <project path="external/f2fs-tools" name="external_f2fs-tools" remote="aokp" revision="kitkat" />
   <project path="external/fdlibm" name="platform/external/fdlibm" />
   <project path="external/ffmpeg" name="CyanogenMod/android_external_ffmpeg" remote="cm" revision="cm-11.0" groups="pdk" />
   <project path="external/flac" name="CyanogenMod/android_external_flac" remote="cm" revision="cm-11.0" groups="pdk" />
   <project path="external/freetype" name="platform/external/freetype" remote="ln" revision="linaro_android_4.4.4" />
-  <project path="external/fsck_msdos" name="AOKP/external_fsck_msdos" remote="aokp" revision="kitkat" />
-  <project path="external/fuse" name="AOKP/external_fuse" remote="aokp" revision="kitkat" />
+  <project path="external/fsck_msdos" name="external_fsck_msdos" remote="aokp" revision="kitkat" />
+  <project path="external/fuse" name="external_fuse" remote="aokp" revision="kitkat" />
   <project path="external/ganymed-ssh2" name="platform/external/ganymed-ssh2" />
   <project path="external/gcc-demangle" name="platform/external/gcc-demangle" groups="pdk" />
   <project path="external/genext2fs" name="platform/external/genext2fs" />
@@ -176,17 +176,17 @@
   <project path="external/jack" name="platform/external/jack" />
   <project path="external/javasqlite" name="CyanogenMod/android_external_javasqlite" remote="cm" revision="cm-11.0" />
   <project path="external/javassist" name="platform/external/javassist" />
-  <project path="external/jbirdvegas/mGerrit" name="AOKP/external_jbirdvegas_mGerrit" remote="aokp" revision="master" />
+  <project path="external/jbirdvegas/mGerrit" name="external_jbirdvegas_mGerrit" remote="aokp" revision="master" />
   <project path="external/jdiff" name="platform/external/jdiff" />
   <project path="external/jhead" name="platform/external/jhead" groups="pdk" />
   <project path="external/jmdns" name="platform/external/jmdns" />
   <project path="external/jmonkeyengine" name="platform/external/jmonkeyengine" />
-  <project path="external/jpeg" name="AOKP/external_jpeg" remote="aokp" revision="kitkat" />
+  <project path="external/jpeg" name="external_jpeg" remote="aokp" revision="kitkat" />
   <project path="external/jsilver" name="platform/external/jsilver" />
   <project path="external/jsr305" name="platform/external/jsr305" />
   <project path="external/junit" name="platform/external/junit" />
   <project path="external/kernel-headers" name="platform/external/kernel-headers" />
-  <project path="external/kissfft" name="AOKP/external_kissfft" remote="aokp" revision="kitkat" />
+  <project path="external/kissfft" name="external_kissfft" remote="aokp" revision="kitkat" />
   <project path="external/koush/Superuser" name="CyanogenMod/Superuser" remote="cm" revision="cm-11.0" />
   <project path="external/koush/Widgets" name="CyanogenMod/Widgets" remote="cm" revision="cm-11.0" />
   <project path="external/libcap-ng" name="platform/external/libcap-ng" />
@@ -203,8 +203,8 @@
   <project path="external/libphonenumber" name="platform/external/libphonenumber" />
   <project path="external/libpng" name="CyanogenMod/android_external_libpng" remote="cm" revision="cm-11.0" groups="pdk" />
   <project path="external/libppp" name="platform/external/libppp" />
-  <project path="external/libselinux" name="AOKP/external_libselinux" remote="aokp" revision="kitkat" groups="pdk" />
-  <project path="external/libsepol" name="AOKP/external_libsepol" remote="aokp" revision="kitkat" />
+  <project path="external/libselinux" name="external_libselinux" remote="aokp" revision="kitkat" groups="pdk" />
+  <project path="external/libsepol" name="external_libsepol" remote="aokp" revision="kitkat" />
   <project path="external/libtar" name="CyanogenMod/android_external_libtar" remote="cm" revision="cm-11.0" />
   <project path="external/libssh2" name="platform/external/libssh2" />
   <project path="external/libusb" name="CyanogenMod/android_external_libusb" remote="cm" revision="cm-11.0" />
@@ -222,7 +222,7 @@
   <project path="external/markdown" name="platform/external/markdown" />
   <project path="external/mdnsresponder" name="platform/external/mdnsresponder" groups="pdk" />
   <project path="external/mesa3d" name="platform/external/mesa3d" />
-  <project path="external/mksh" name="AOKP/external_mksh" remote="aokp" revision="kitkat" groups="pdk" />
+  <project path="external/mksh" name="external_mksh" remote="aokp" revision="kitkat" groups="pdk" />
   <project path="external/mockito" name="platform/external/mockito" />
   <project path="external/mockwebserver" name="platform/external/mockwebserver" />
   <project path="external/mp4parser" name="platform/external/mp4parser" />
@@ -234,7 +234,7 @@
   <project path="external/nist-pkits" name="platform/external/nist-pkits" />
   <project path="external/nist-sip" name="CyanogenMod/android_external_nist-sip" remote="cm" revision="cm-11.0" />
   <project path="external/noto-fonts" name="platform/external/noto-fonts" />
-  <project path="external/ntfs-3g" name="AOKP/external_ntfs-3g" remote="aokp" revision="kitkat" />
+  <project path="external/ntfs-3g" name="external_ntfs-3g" remote="aokp" revision="kitkat" />
   <project path="external/oauth" name="platform/external/oauth" />
   <project path="external/objenesis" name="platform/external/objenesis" />
   <project path="external/okhttp" name="platform/external/okhttp" />
@@ -244,7 +244,7 @@
   <project path="external/openssh" name="platform/external/openssh" remote="ln" revision="linaro_android_4.4.4" />
   <project path="external/openssl" name="CyanogenMod/android_external_openssl" remote="cm" revision="cm-11.0" groups="pdk" />
   <project path="external/oprofile" name="platform/external/oprofile" />
-  <project path="external/pigz" name="AOKP/external_pigz" remote="aokp" revision="kitkat" />
+  <project path="external/pigz" name="external_pigz" remote="aokp" revision="kitkat" />
   <project path="external/pixman" name="platform/external/pixman" />
   <project path="external/ppp" name="platform/external/ppp" />
   <project path="external/proguard" name="platform/external/proguard" groups="pdk-java" />
@@ -286,11 +286,11 @@
   <project path="external/webp" name="platform/external/webp" />
   <project path="external/webrtc" name="platform/external/webrtc" groups="pdk" />
   <project path="external/wpa_supplicant_8" name="CyanogenMod/android_external_wpa_supplicant_8" remote="cm" revision="cm-11.0" groups="pdk"/>
-  <project path="external/wpa_supplicant_8_ti" name="AOKP/external_wpa_supplicant_8_ti" remote="aokp" revision="kitkat" />
+  <project path="external/wpa_supplicant_8_ti" name="external_wpa_supplicant_8_ti" remote="aokp" revision="kitkat" />
   <project path="external/xmlwriter" name="platform/external/xmlwriter" />
   <project path="external/xmp_toolkit" name="platform/external/xmp_toolkit" />
-  <project path="external/yaffs2" name="AOKP/external_yaffs2" remote="aokp" revision="kitkat" groups="pdk" />
-  <project path="external/zlib" name="AOKP/external_zlib" remote="aokp" revision="kitkat" groups="pdk" />
+  <project path="external/yaffs2" name="external_yaffs2" remote="aokp" revision="kitkat" groups="pdk" />
+  <project path="external/zlib" name="external_zlib" remote="aokp" revision="kitkat" groups="pdk" />
   <project path="external/zxing" name="platform/external/zxing" />
   <project path="frameworks/av" name="android_platform_frameworks_av" remote="plain" revision="kk"  />
   <project path="frameworks/base" name="android_platform_frameworks_base" remote="plain" revision="kk" />
@@ -357,7 +357,7 @@
   <project path="hardware/ti/omap4xxx" name="CyanogenMod/android_hardware_ti_omap4xxx" remote="cm" revision="cm-11.0" />
   <project path="hardware/ti/wlan" name="CyanogenMod/android_hardware_ti_wlan" remote="cm" revision="cm-11.0" />
   <project path="hardware/ti/wpan" name="CyanogenMod/android_hardware_ti_wpan" remote="cm" revision="cm-11.0" />
-   <project path="libcore" name="AOKP/libcore" remote="aokp" revision="kitkat" />
+   <project path="libcore" name="libcore" remote="aokp" revision="kitkat" />
   <project path="libnativehelper" name="platform/libnativehelper" groups="pdk-java" />
   <project path="ndk" name="platform/ndk" />
   <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" />
@@ -366,24 +366,24 @@
   <project path="packages/apps/Browser" name="android_platform_packages_apps_Browser" remote="plain" revision="kk" />
   <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" />
   <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" />
-  <project path="packages/apps/Camera2" name="AOKP/packages_apps_Camera2" remote="aokp" revision="kitkat" />
+  <project path="packages/apps/Camera2" name="packages_apps_Camera2" remote="aokp" revision="kitkat" />
   <project path="packages/apps/CertInstaller" name="platform/packages/apps/CertInstaller" />
-  <project path="packages/apps/Contacts" name="AOKP/packages_apps_Contacts" remote="aokp" revision="kitkat" />
+  <project path="packages/apps/Contacts" name="packages_apps_Contacts" remote="aokp" revision="kitkat" />
   <project path="packages/apps/ContactsCommon" name="platform/packages/apps/ContactsCommon" />
-  <project path="packages/apps/DeskClock" name="AOKP/packages_apps_DeskClock" remote="aokp" revision="kitkat" />
-  <project path="packages/apps/Dialer" name="AOKP/packages_apps_Dialer" remote="aokp" revision="kitkat" />
+  <project path="packages/apps/DeskClock" name="packages_apps_DeskClock" remote="aokp" revision="kitkat" />
+  <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="aokp" revision="kitkat" />
   <project path="packages/apps/Email" name="platform/packages/apps/Email" />
   <project path="packages/apps/Exchange" name="platform/packages/apps/Exchange" />
-  <project path="packages/apps/Gallery2" name="AOKP/packages_apps_Gallery2" remote="aokp" revision="kitkat" />
+  <project path="packages/apps/Gallery2" name="packages_apps_Gallery2" remote="aokp" revision="kitkat" />
   <project path="packages/apps/HTMLViewer" name="platform/packages/apps/HTMLViewer" />
-  <project path="packages/apps/InCallUI" name="AOKP/packages_apps_InCallUI" remote="aokp" revision="kitkat" />
+  <project path="packages/apps/InCallUI" name="packages_apps_InCallUI" remote="aokp" revision="kitkat" />
   <project path="packages/apps/KeyChain" name="platform/packages/apps/KeyChain" />
-  <project path="packages/apps/Launcher3" name="AOKP/packages_apps_Launcher3" remote="aokp" revision="kitkat" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="aokp" revision="kitkat" />
   <project path="packages/apps/LegacyCamera" name="platform/packages/apps/LegacyCamera" />
   <project path="packages/apps/Mms" name="android_platform_packages_apps_Mms" remote="plain" revision="kk" />
   <project path="packages/apps/Music" name="platform/packages/apps/Music" groups="notdefault,legacypackages" />
   <project path="packages/apps/MusicFX" name="platform/packages/apps/MusicFX" />
-  <project path="packages/apps/Nfc" name="AOKP/packages_apps_Nfc" remote="aokp" revision="kitkat" />
+  <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="aokp" revision="kitkat" />
   <project path="packages/apps/OneTimeInitializer" name="platform/packages/apps/OneTimeInitializer" />
   <project path="packages/apps/PackageInstaller" name="platform/packages/apps/PackageInstaller" />
   <project path="packages/apps/Phone" name="platform/packages/apps/Phone" groups="notdefault,legacypackages" />
@@ -401,24 +401,24 @@
   <project path="packages/apps/Stk" name="platform/packages/apps/Stk" />
   <project path="packages/apps/Tag" name="platform/packages/apps/Tag" />
   <project path="packages/apps/ThemeChooser" name="CyanogenMod/android_packages_apps_ThemeChooser" remote="cm" revision="cm-11.0" />
-  <project path="packages/apps/Torch" name="AOKP/packages_apps_Torch" remote="aokp" revision="kitkat" />
+  <project path="packages/apps/Torch" name="packages_apps_Torch" remote="aokp" revision="kitkat" />
   <project path="packages/apps/UnifiedEmail" name="platform/packages/apps/UnifiedEmail" />
   <project path="packages/apps/VideoEditor" name="platform/packages/apps/VideoEditor" groups="notdefault,legacypackages" />
   <project path="packages/apps/VoiceDialer" name="platform/packages/apps/VoiceDialer" groups="notdefault,legacypackages"/>
-  <project path="packages/inputmethods/LatinIME" name="AOKP/packages_input_LatinIME" remote="aokp" revision="kitkat" />
+  <project path="packages/inputmethods/LatinIME" name="packages_input_LatinIME" remote="aokp" revision="kitkat" />
   <project path="packages/providers/ApplicationsProvider" name="platform/packages/providers/ApplicationsProvider" />
   <project path="packages/providers/CalendarProvider" name="platform/packages/providers/CalendarProvider" />
-  <project path="packages/providers/ContactsProvider" name="AOKP/packages_providers_ContactsProvider" remote="aokp" revision="kitkat" />
-  <project path="packages/providers/DownloadProvider" name="AOKP/packages_providers_DownloadProvider" remote="aokp" revision="kitkat" />
-  <project path="packages/providers/MediaProvider" name="AOKP/packages_providers_MediaProvider" remote="aokp" revision="kitkat" />
+  <project path="packages/providers/ContactsProvider" name="packages_providers_ContactsProvider" remote="aokp" revision="kitkat" />
+  <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="aokp" revision="kitkat" />
+  <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" remote="aokp" revision="kitkat" />
   <project path="packages/providers/PartnerBookmarksProvider" name="platform/packages/providers/PartnerBookmarksProvider" />
-  <project path="packages/providers/TelephonyProvider" name="AOKP/packages_providers_TelephonyProvider" remote="aokp" revision="kitkat" />
+  <project path="packages/providers/TelephonyProvider" name="packages_providers_TelephonyProvider" remote="aokp" revision="kitkat" />
   <project path="packages/providers/ThemesProvider" name="CyanogenMod/android_packages_providers_ThemesProvider" remote="cm" revision="cm-11.0" />
   <project path="packages/providers/UserDictionaryProvider" name="platform/packages/providers/UserDictionaryProvider" />
   <project path="packages/screensavers/Basic" name="platform/packages/screensavers/Basic" />
   <project path="packages/screensavers/PhotoTable" name="platform/packages/screensavers/PhotoTable" />
   <project path="packages/screensavers/WebView" name="platform/packages/screensavers/WebView" />
-  <project path="packages/services/Telephony" name="AOKP/packages_services_Telephony" remote="aokp" revision="kitkat" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="aokp" revision="kitkat" />
   <project path="packages/wallpapers/Basic" name="platform/packages/wallpapers/Basic" groups="notdefault" />
   <project path="packages/wallpapers/Galaxy4" name="platform/packages/wallpapers/Galaxy4" groups="notdefault" />
   <project path="packages/wallpapers/HoloSpiral" name="platform/packages/wallpapers/HoloSpiral" groups="notdefault" />
@@ -441,7 +441,7 @@
   <project path="prebuilts/clang/linux-x86/x86/3.3" name="platform/prebuilts/clang/linux-x86/x86/3.3" groups="linux,x86,notdefault" />
   <project path="prebuilts/devtools" name="platform/prebuilts/devtools" />
   <project path="prebuilts/eclipse" name="platform/prebuilts/eclipse"  />
-  <project path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.4.3" name="AOKP/prebuilts_gcc_darwin-x86_arm_arm-eabi-4.4.3" remote="aokp" revision="kitkat" groups="darwin,arm" />
+  <project path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.4.3" name="prebuilts_gcc_darwin-x86_arm_arm-eabi-4.4.3" remote="aokp" revision="kitkat" groups="darwin,arm" />
   <project path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.6" name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.6" groups="darwin,arm" />
   <project path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.7" name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.7" remote="aosp" groups="pdk,darwin,arm" />
   <project path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" revision="refs/heads/master" remote="aosp" groups="pdk,darwin,arm,notdefault" />
@@ -456,7 +456,7 @@
   <project path="prebuilts/gcc/darwin-x86/mips/mipsel-linux-android-4.7" name="platform/prebuilts/gcc/darwin-x86/mips/mipsel-linux-android-4.7" groups="pdk,darwin,mips,notdefault" />
   <project path="prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.6" name="platform/prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.6" groups="darwin,x86,notdefault" />
   <project path="prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.7" name="platform/prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.7" groups="pdk,darwin,x86,notdefault" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.4.3" name="AOKP/prebuilts_gcc_linux-x86_arm_arm-eabi-4.4.3" remote="aokp" revision="kitkat" groups="linux,arm" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.4.3" name="prebuilts_gcc_linux-x86_arm_arm-eabi-4.4.3" remote="aokp" revision="kitkat" groups="linux,arm" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.6" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.6" groups="linux,arm" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" groups="pdk,linux,arm" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" revision="refs/heads/master" />
@@ -472,7 +472,7 @@
   <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.7" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.7" groups="pdk,linux,x86,notdefault" />
   <project path="prebuilts/gradle-plugin" name="platform/prebuilts/gradle-plugin" />
   <project path="prebuilts/maven_repo/android" name="platform/prebuilts/maven_repo/android" />
-  <project path="prebuilts/misc" name="AOKP/prebuilts_misc" remote="aokp" revision="kitkat" groups="pdk" />
+  <project path="prebuilts/misc" name="prebuilts_misc" remote="aokp" revision="kitkat" groups="pdk" />
   <project path="prebuilts/ndk" name="platform/prebuilts/ndk" groups="pdk" />
   <project path="prebuilts/python/darwin-x86/2.7.5" name="platform/prebuilts/python/darwin-x86/2.7.5" groups="darwin" />
   <project path="prebuilts/python/linux-x86/2.7.5" name="platform/prebuilts/python/linux-x86/2.7.5" groups="linux" />
@@ -482,12 +482,12 @@
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="platform/sdk" />
   <project path="system/core" name="android_platform_system_core" remote="plain" revision="kk" />
-  <project path="system/extras" name="AOKP/system_extras" remote="aokp" revision="kitkat" groups="pdk" />
-  <project path="system/media" name="AOKP/system_media" remote="aokp" revision="kitkat" groups="pdk" />
+  <project path="system/extras" name="system_extras" remote="aokp" revision="kitkat" groups="pdk" />
+  <project path="system/media" name="system_media" remote="aokp" revision="kitkat" groups="pdk" />
   <project path="system/netd" name="CyanogenMod/android_system_netd" remote="cm" revision="cm-11.0" groups="pdk" />
   <project path="system/qcom" name="android_platform_system_qcom" remote="plain" revision="kk" />
   <project path="system/security" name="platform/system/security" groups="pdk" />
-  <project path="system/vold" name="AOKP/system_vold" remote="aokp" revision="kitkat" groups="pdk" />
+  <project path="system/vold" name="system_vold" remote="aokp" revision="kitkat" groups="pdk" />
 <!--
   <project path="tools/adt/eclipse" name="platform/tools/adt/eclipse" groups="notdefault,tools" />
   <project path="tools/adt/idea" name="platform/tools/adt/idea" groups="notdefault,tools" />
@@ -502,8 +502,8 @@
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
 -->
   <project path="vendor/plain" name="android_platform_vendor_plain" remote="plain" revision="kk" />
-  <project path="vendor/htc" name="AOKP/vendor_htc" remote="aokp" revision="kitkat" />
-  <project path="vendor/motorola" name="AOKP/vendor_motorola" remote="aokp" revision="kitkat" />
+  <project path="vendor/htc" name="vendor_htc" remote="aokp" revision="kitkat" />
+  <project path="vendor/motorola" name="vendor_motorola" remote="aokp" revision="kitkat" />
   <project path="platform_manifest" name="platform_manifest" remote="plain" revision="kk" />
 
 <!-- Currently unused repos
